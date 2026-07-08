@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+    <string name="app_name">GPS Camera: Timestamp &amp; Map</string>
+    <string name="app_tagline">Capture. Locate. Report.</string>
+
+    <!-- Generic actions -->
+    <string name="action_continue">Continue</string>
+    <string name="action_next">Next</string>
+    <string name="action_skip">Skip</string>
+    <string name="action_get_started">Get Started</string>
+    <string name="action_back">Back</string>
+    <string name="action_close">Close</string>
+    <string name="action_retry">Retry</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="action_delete">Delete</string>
+    <string name="action_share">Share</string>
+    <string name="action_save">Save</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_open_settings">Open settings</string>
+    <string name="action_select_all">Select all</string>
+
+    <!-- Language screen -->
+    <string name="language_title">Select Language</string>
+    <string name="language_heading">Choose Your Language</string>
+    <string name="language_subtitle">You can change this later in Settings</string>
+
+    <!-- Onboarding -->
+    <string name="onboarding_1_title">Stamp Every Photo with GPS</string>
+    <string name="onboarding_1_body">Automatically add location, date and time to every photo and video you capture. Perfect for fieldwork and documentation.</string>
+    <string name="onboarding_2_title">Real-Time Location</string>
+    <string name="onboarding_2_body">See your precise coordinates, altitude and accuracy live before you capture, so every record is verifiable.</string>
+    <string name="onboarding_3_title">Build Field Reports</string>
+    <string name="onboarding_3_body">Group captures into reports, add notes and export shareable PDFs with embedded GPS evidence.</string>
+    <string name="onboarding_step_indicator">Step %1$d of %2$d</string>
+
+    <!-- Bottom navigation -->
+    <string name="nav_camera">Camera</string>
+    <string name="nav_collection">Collection</string>
+    <string name="nav_reporting">Reporting</string>
+    <string name="nav_templates">Templates</string>
+
+    <!-- Camera -->
+    <string name="camera_mode_photo">Photo</string>
+    <string name="camera_mode_video">Video</string>
+    <string name="camera_shutter">Capture photo</string>
+    <string name="camera_record_start">Start recording</string>
+    <string name="camera_record_stop">Stop recording</string>
+    <string name="camera_flash">Toggle flash</string>
+    <string name="camera_switch_lens">Switch camera</string>
+    <string name="camera_open_gallery">Open last capture</string>
+    <string name="camera_gps_acquiring">Acquiring location…</string>
+    <string name="camera_gps_precise">GPS Fixed</string>
+    <string name="camera_gps_approximate">Approximate location</string>
+    <string name="camera_gps_unavailable">Location unavailable</string>
+    <string name="camera_altitude">Alt: %1$s</string>
+    <string name="camera_permission_rationale">GPS Camera: Timestamp &amp; Map needs the camera to capture field evidence.</string>
+    <string name="camera_permission_denied">Camera permission is required to capture. Enable it in settings.</string>
+    <string name="location_permission_rationale">Location is used while the camera is active to stamp captures with verifiable coordinates. GPS Camera: Timestamp &amp; Map never tracks you in the background.</string>
+    <string name="audio_permission_rationale">Microphone is used only to record audio with video. You can record silently instead.</string>
+    <string name="audio_record_silent">Record without audio</string>
+    <string name="camera_error_unavailable">Camera is unavailable. Try again.</string>
+    <string name="capture_saved">Capture saved</string>
+    <string name="capture_failed">Capture failed</string>
+
+    <!-- Collection -->
+    <string name="collection_title">Collection</string>
+    <string name="collection_search_hint">Search by location, date…</string>
+    <string name="filter_all">All</string>
+    <string name="filter_today">Today</string>
+    <string name="filter_this_week">This Week</string>
+    <string name="filter_videos">Videos</string>
+    <string name="filter_photos">Photos</string>
+    <string name="collection_empty">No captures yet. Open the camera to add your first.</string>
+    <string name="collection_group_today">Today</string>
+    <string name="collection_group_yesterday">Yesterday</string>
+    <string name="media_status_processing">Processing…</string>
+    <string name="media_status_failed">Failed</string>
+    <string name="media_status_missing">File missing</string>
+    <string name="media_detail_title">Capture</string>
+    <string name="selection_count">%1$d selected</string>
+    <string name="delete_confirm_title">Delete selected?</string>
+    <string name="delete_confirm_attached">Some items are attached to reports. Deleting removes them from this device; exported PDFs are unaffected.</string>
+    <string name="delete_confirm_single">Delete this item? This cannot be undone.</string>
+
+    <!-- Media detail / gallery export -->
+    <string name="action_save_gallery">Save to gallery</string>
+    <string name="photo_saved_gallery">Photo saved to gallery</string>
+    <string name="video_saved_gallery">Video saved to gallery</string>
+    <string name="already_in_gallery">Already available in gallery</string>
+    <string name="gallery_save_failed">Couldn\'t save to gallery</string>
+    <string name="video_load_error">Couldn\'t play this video</string>
+    <string name="video_processing">Processing video…</string>
+    <string name="action_play">Play</string>
+    <string name="action_pause">Pause</string>
+
+    <!-- Video capture finalization -->
+    <string name="video_saved_success">Video saved successfully</string>
+    <string name="video_record_failed">Recording failed</string>
+    <string name="video_finalizing">Saving video…</string>
+
+    <!-- Reporting -->
+    <string name="reporting_title">Reporting</string>
+    <string name="reporting_search_hint">Search reports…</string>
+    <string name="reporting_recent">Recent Reports</string>
+    <string name="filter_all_reports">All Reports</string>
+    <string name="filter_draft">Draft</string>
+    <string name="filter_exported">Exported</string>
+    <string name="filter_shared">Shared</string>
+    <string name="report_status_draft">DRAFT</string>
+    <string name="report_status_exported">EXPORTED</string>
+    <string name="report_status_shared">SHARED</string>
+    <string name="reporting_empty">No reports yet. Tap + to start one.</string>
+    <string name="report_media_counts">%1$d Photos · %2$d Videos</string>
+
+    <!-- New report -->
+    <string name="new_report_title">New Report</string>
+    <string name="report_save_draft">Save Draft</string>
+    <string name="report_field_title">Report Title</string>
+    <string name="report_field_title_hint">e.g. Site Inspection Block 5</string>
+    <string name="report_field_location">Location</string>
+    <string name="report_field_date">Date</string>
+    <string name="report_field_time">Time</string>
+    <string name="report_field_notes">Notes / Description</string>
+    <string name="report_field_notes_hint">Add site notes, observations or remarks…</string>
+    <string name="report_attached_photos">Attached Photos</string>
+    <string name="report_see_all">See All (%1$d)</string>
+    <string name="report_gps_data">GPS Data</string>
+    <string name="report_gps_live">LIVE</string>
+    <string name="report_latitude">Latitude</string>
+    <string name="report_longitude">Longitude</string>
+    <string name="report_altitude">Altitude</string>
+    <string name="report_accuracy">Accuracy</string>
+    <string name="report_submit">Submit Report</string>
+    <string name="report_submit_caption">Report will be saved with GPS verification</string>
+    <string name="report_export_pdf">Export PDF</string>
+    <string name="report_save_as">Save As…</string>
+    <string name="report_export_in_progress">Exporting PDF…</string>
+    <string name="report_export_failed">Export failed</string>
+    <string name="report_discard_title">Discard changes?</string>
+    <string name="report_location_unavailable">Location unavailable</string>
+    <string name="report_refresh_location">Refresh location</string>
+
+    <!-- Templates -->
+    <string name="templates_title">Timestamp Templates</string>
+    <string name="templates_subtitle">Choose a Timestamp Style</string>
+    <string name="template_minimal">Minimal</string>
+    <string name="template_minimal_desc">Date and time only. Clean and simple.</string>
+    <string name="template_classic">Classic</string>
+    <string name="template_classic_desc">Date, time and GPS coordinates.</string>
+    <string name="template_detailed">Detailed</string>
+    <string name="template_detailed_desc">Full date, time, coordinates, altitude and address.</string>
+    <string name="template_reporter">Reporter</string>
+    <string name="template_reporter_desc">Branded template for professional field reports.</string>
+    <string name="template_selected">Selected</string>
+
+    <!-- Settings -->
+    <string name="settings_title">Settings</string>
+    <string name="settings_preferences">PREFERENCES</string>
+    <string name="settings_language">Language</string>
+    <string name="settings_share_app">Share App</string>
+    <string name="settings_privacy">Privacy Policy</string>
+    <string name="settings_terms">Terms &amp; Conditions</string>
+    <string name="settings_version">Version %1$s</string>
+    <string name="share_app_text">Capture GPS-stamped photos and field reports with %1$s.</string>
+
+    <!-- Legal -->
+    <string name="legal_privacy_title">Privacy Policy</string>
+    <string name="legal_terms_title">Terms &amp; Conditions</string>
+    <string name="privacy_policy_url">https://sites.google.com/view/gpscameratimestampmap/home</string>
+    <string name="terms_url">https://sites.google.com/view/gps-camera-timestamp-map/home</string>
+    <string name="legal_privacy_body">GPS Camera: Timestamp &amp; Map processes your photos, videos, location, and report content entirely on your device by default. Location is used only while the camera screen is active or at capture time to stamp captures with coordinates; GPS Camera: Timestamp &amp; Map does not use background location. Captured media may embed visible stamps and EXIF GPS/time metadata. Exported or shared files may reveal location to recipients and are outside the app\'s control once shared. GPS Camera: Timestamp &amp; Map does not upload your coordinates, media, notes, or identifiers in this release. You can delete media and reports from within the app at any time; copies you have already shared or exported are not affected.</string>
+    <string name="legal_terms_body">GPS Camera: Timestamp &amp; Map is provided as a field documentation tool. GPS coordinates and device clocks can be manipulated on consumer devices; GPS Camera: Timestamp &amp; Map records location and time evidence and consistency signals but does not provide cryptographic proof of physical presence. Use captured records accordingly. You are responsible for complying with local laws regarding photography, recording, and privacy when using this app.</string>
+
+    <!-- Coordinate formatting -->
+    <string name="coord_lat_north">%1$s° N</string>
+    <string name="coord_lat_south">%1$s° S</string>
+    <string name="coord_lon_east">%1$s° E</string>
+    <string name="coord_lon_west">%1$s° W</string>
+    <string name="value_meters">%1$s m</string>
+    <string name="value_accuracy">±%1$s m</string>
+    <string name="value_unavailable">—</string>
+    <string name="template_resolving_address">Resolving address…</string>
+
+    <!-- Language display names (always shown in their own language; not translated) -->
+    <string name="lang_name_en">English</string>
+    <string name="lang_endonym_en">English</string>
+    <string name="lang_name_ur">Urdu</string>
+    <string name="lang_endonym_ur">اردو</string>
+    <string name="lang_name_ar">Arabic</string>
+    <string name="lang_endonym_ar">العربية</string>
+    <string name="lang_name_hi">Hindi</string>
+    <string name="lang_endonym_hi">हिन्दी</string>
+    <string name="lang_name_fr">French</string>
+    <string name="lang_endonym_fr">Français</string>
+    <string name="lang_name_es">Spanish</string>
+    <string name="lang_endonym_es">Español</string>
+    <string name="lang_name_pt">Portuguese</string>
+    <string name="lang_endonym_pt">Português</string>
+    <string name="lang_name_de">German</string>
+    <string name="lang_endonym_de">Deutsch</string>
+    <string name="lang_name_it">Italian</string>
+    <string name="lang_endonym_it">Italiano</string>
+    <string name="lang_name_ja">Japanese</string>
+    <string name="lang_endonym_ja">日本語</string>
+    <string name="lang_name_zh">Chinese (Simplified)</string>
+    <string name="lang_endonym_zh">简体中文</string>
+
+    <plurals name="photos_count">
+        <item quantity="one">%1$d Photo</item>
+        <item quantity="other">%1$d Photos</item>
+    </plurals>
+    <plurals name="videos_count">
+        <item quantity="one">%1$d Video</item>
+        <item quantity="other">%1$d Videos</item>
+    </plurals>
+</resources>

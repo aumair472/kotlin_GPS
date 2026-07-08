@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base app theme: Compose drives all UI; AppCompat parent enables per-app locales. -->
+    <style name="Theme.GeoSnap" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowBackground">@color/white</item>
+    </style>
+
+    <!-- Android 12+ system splash screen, branded per DESIGN_SYSTEM. -->
+    <style name="Theme.GeoSnap.Starting" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/splash_background</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/gps_icon</item>
+        <item name="postSplashScreenTheme">@style/Theme.GeoSnap</item>
+    </style>
+</resources>

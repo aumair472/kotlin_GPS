@@ -1,0 +1,21 @@
+com.geosnap.benchmark-pngs-0 C:\App Development\GeoSnap\benchmark\build\generated\res\pngs\debug
+com.geosnap.benchmark-resValues-1 C:\App Development\GeoSnap\benchmark\build\generated\res\resValues\debug
+com.geosnap.benchmark-mergeDebugResources-2 C:\App Development\GeoSnap\benchmark\build\intermediates\incremental\debug\mergeDebugResources\merged.dir
+com.geosnap.benchmark-mergeDebugResources-3 C:\App Development\GeoSnap\benchmark\build\intermediates\incremental\debug\mergeDebugResources\stripped.dir
+com.geosnap.benchmark-debug-4 C:\App Development\GeoSnap\benchmark\build\intermediates\merged_res\debug\mergeDebugResources
+com.geosnap.benchmark-debug-5 C:\App Development\GeoSnap\benchmark\src\debug\res
+com.geosnap.benchmark-main-6 C:\App Development\GeoSnap\benchmark\src\main\res
+com.geosnap.benchmark-tracing-perfetto-binary-1.0.0-7 C:\Users\umair\.gradle\caches\8.11.1\transforms\0adcd69e511464b218490633b772f64f\transformed\tracing-perfetto-binary-1.0.0\res
+com.geosnap.benchmark-tracing-ktx-1.1.0-8 C:\Users\umair\.gradle\caches\8.11.1\transforms\1137d7ffd1ed02e2b7efe8c066ae7d01\transformed\tracing-ktx-1.1.0\res
+com.geosnap.benchmark-benchmark-macro-1.3.3-9 C:\Users\umair\.gradle\caches\8.11.1\transforms\43c2961d2a4f7312e667d78a9ae2eb22\transformed\benchmark-macro-1.3.3\res
+com.geosnap.benchmark-startup-runtime-1.1.1-10 C:\Users\umair\.gradle\caches\8.11.1\transforms\5607d10695a670e281c97f7f6f1b3e2e\transformed\startup-runtime-1.1.1\res
+com.geosnap.benchmark-benchmark-common-1.3.3-11 C:\Users\umair\.gradle\caches\8.11.1\transforms\72afec35c5a4b9921377173a7d85a0c6\transformed\benchmark-common-1.3.3\res
+com.geosnap.benchmark-lifecycle-runtime-2.3.1-12 C:\Users\umair\.gradle\caches\8.11.1\transforms\7f6e6fb9d492f9c3bb091056a80c7a22\transformed\lifecycle-runtime-2.3.1\res
+com.geosnap.benchmark-core-1.9.0-13 C:\Users\umair\.gradle\caches\8.11.1\transforms\9469018ba6e4b6f312b42d2ffc10d2c4\transformed\core-1.9.0\res
+com.geosnap.benchmark-annotation-experimental-1.4.1-14 C:\Users\umair\.gradle\caches\8.11.1\transforms\b07624a1eb6ad57eeb6973ff32cc2ad8\transformed\annotation-experimental-1.4.1\res
+com.geosnap.benchmark-benchmark-macro-junit4-1.3.3-15 C:\Users\umair\.gradle\caches\8.11.1\transforms\ba07103c886093ebf351f31b6827cd06\transformed\benchmark-macro-junit4-1.3.3\res
+com.geosnap.benchmark-core-1.6.1-16 C:\Users\umair\.gradle\caches\8.11.1\transforms\bfa1f03f05b5e5e565949e4f772358fe\transformed\core-1.6.1\res
+com.geosnap.benchmark-tracing-perfetto-1.0.0-17 C:\Users\umair\.gradle\caches\8.11.1\transforms\c05496a582e54a72780b42acc8f8b78b\transformed\tracing-perfetto-1.0.0\res
+com.geosnap.benchmark-tracing-1.1.0-18 C:\Users\umair\.gradle\caches\8.11.1\transforms\e498fd88c5a3d715f09cd0b55d4e40bd\transformed\tracing-1.1.0\res
+com.geosnap.benchmark-profileinstaller-1.3.1-19 C:\Users\umair\.gradle\caches\8.11.1\transforms\e9841a2c12dd09b34734cf04da5a1c09\transformed\profileinstaller-1.3.1\res
+com.geosnap.benchmark-uiautomator-2.3.0-20 C:\Users\umair\.gradle\caches\8.11.1\transforms\fd22457b20c6638145a316eafa03be49\transformed\uiautomator-2.3.0\res

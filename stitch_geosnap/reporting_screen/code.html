@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Reporting - GeoSnap</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Geist:wght@400;500&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@100..900&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-low": "#f3f3fe",
+                        "primary-fixed-dim": "#b4c5ff",
+                        "on-surface-variant": "#434655",
+                        "inverse-on-surface": "#f0f0fb",
+                        "on-secondary": "#ffffff",
+                        "on-background": "#191b23",
+                        "on-secondary-fixed": "#151c27",
+                        "on-tertiary": "#ffffff",
+                        "surface-variant": "#e1e2ed",
+                        "primary": "#004ac6",
+                        "on-error": "#ffffff",
+                        "secondary": "#585f6c",
+                        "on-primary-fixed": "#00174b",
+                        "background": "#faf8ff",
+                        "inverse-primary": "#b4c5ff",
+                        "primary-fixed": "#dbe1ff",
+                        "secondary-fixed-dim": "#c0c7d6",
+                        "error-container": "#ffdad6",
+                        "tertiary-container": "#bc4800",
+                        "outline-variant": "#c3c6d7",
+                        "error": "#ba1a1a",
+                        "on-tertiary-fixed": "#360f00",
+                        "on-error-container": "#93000a",
+                        "tertiary-fixed": "#ffdbcd",
+                        "surface-bright": "#faf8ff",
+                        "surface-dim": "#d9d9e5",
+                        "on-secondary-container": "#5e6572",
+                        "surface-container": "#ededf9",
+                        "outline": "#737686",
+                        "surface-container-high": "#e7e7f3",
+                        "primary-container": "#2563eb",
+                        "on-primary": "#ffffff",
+                        "secondary-container": "#dce2f3",
+                        "inverse-surface": "#2e3039",
+                        "on-primary-fixed-variant": "#003ea8",
+                        "on-primary-container": "#eeefff",
+                        "surface-container-highest": "#e1e2ed",
+                        "on-tertiary-container": "#ffede6",
+                        "surface": "#faf8ff",
+                        "on-secondary-fixed-variant": "#404754",
+                        "surface-tint": "#0053db",
+                        "on-surface": "#191b23",
+                        "tertiary-fixed-dim": "#ffb596",
+                        "on-tertiary-fixed-variant": "#7d2d00",
+                        "tertiary": "#943700",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-fixed": "#dce2f3"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "space-lg": "24px",
+                        "space-xs": "4px",
+                        "margin-desktop": "32px",
+                        "space-xl": "40px",
+                        "space-sm": "8px",
+                        "space-md": "16px",
+                        "gutter": "16px",
+                        "container-max-width": "1200px"
+                    },
+                    "fontFamily": {
+                        "mono-data": ["Geist"],
+                        "headline-lg-mobile": ["Hanken Grotesk"],
+                        "headline-lg": ["Hanken Grotesk"],
+                        "label-caps": ["Hanken Grotesk"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "body-sm": ["Hanken Grotesk"],
+                        "headline-md": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "mono-data": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+                        "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-lg": ["30px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "headline-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Hanken Grotesk', sans-serif;
+            background-color: #FFFFFF;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .active-dot::after {
+            content: '';
+            display: block;
+            width: 4px;
+            height: 4px;
+            background-color: #2563EB;
+            border-radius: 50%;
+            margin-top: 2px;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="text-on-surface">
+<!-- TopAppBar -->
+<header class="w-full top-0 sticky bg-surface border-b border-outline-variant z-50">
+<div class="flex items-center justify-between px-margin-mobile h-14 w-full">
+<button class="active:opacity-80 transition-opacity p-1">
+<span class="material-symbols-outlined text-on-surface">arrow_back</span>
+</button>
+<h1 class="font-headline-md text-headline-md font-bold text-on-surface">Reporting</h1>
+<button class="active:opacity-80 transition-opacity p-1">
+<span class="material-symbols-outlined text-primary-container">add</span>
+</button>
+</div>
+</header>
+<main class="pb-24 pt-4 px-margin-mobile">
+<!-- Search Bar -->
+<div class="relative w-full mb-6">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline">search</span>
+<input class="w-full bg-[#F3F4F6] border-none rounded-[12px] pl-11 pr-4 py-3 text-body-sm focus:ring-2 focus:ring-primary-container outline-none transition-all" placeholder="Search reports..." type="text"/>
+</div>
+<!-- Filter Chips -->
+<div class="flex gap-2 overflow-x-auto pb-6 scrollbar-hide">
+<button class="whitespace-nowrap px-4 py-2 rounded-full bg-primary-container text-white text-label-caps active:scale-95 transition-transform">All Reports</button>
+<button class="whitespace-nowrap px-4 py-2 rounded-full bg-[#F3F4F6] text-on-surface-variant text-label-caps active:scale-95 transition-transform hover:bg-surface-variant">Draft</button>
+<button class="whitespace-nowrap px-4 py-2 rounded-full bg-[#F3F4F6] text-on-surface-variant text-label-caps active:scale-95 transition-transform hover:bg-surface-variant">Exported</button>
+<button class="whitespace-nowrap px-4 py-2 rounded-full bg-[#F3F4F6] text-on-surface-variant text-label-caps active:scale-95 transition-transform hover:bg-surface-variant">Shared</button>
+</div>
+<!-- Section Label -->
+<h2 class="text-[#6B7280] font-label-caps mb-4">Recent Reports</h2>
+<!-- Report Cards List -->
+<div class="flex flex-col gap-4">
+<!-- Card 1: Site Inspection -->
+<div class="bg-white border border-[#E0E0E0] rounded-[12px] p-4 flex flex-col gap-3">
+<div class="flex justify-between items-start">
+<h3 class="font-headline-md text-[16px] font-bold text-on-surface">Site Inspection — Block 5</h3>
+<span class="px-2 py-0.5 rounded-[4px] bg-[#FEF3C7] text-[#D97706] text-[10px] font-bold uppercase tracking-wider">Draft</span>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-1 text-[#6B7280]">
+<span class="material-symbols-outlined text-[14px]">location_on</span>
+<span class="text-body-sm text-[12px]">Karachi, Sindh PK</span>
+</div>
+<div class="flex items-center gap-1 text-[#6B7280]">
+<span class="material-symbols-outlined text-[14px]">calendar_today</span>
+<span class="text-body-sm text-[12px]">21 Nov 2024 | 14:32 PKT</span>
+</div>
+</div>
+<div class="flex gap-2">
+<div class="w-14 h-14 rounded-lg bg-surface-variant overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A detailed high-angle professional architectural photograph of an industrial construction site under a bright clear sky. The focus is on the structural steel beams and reinforced concrete foundations. The lighting is crisp and natural, highlighting textures of raw materials. The aesthetic is clean, professional, and documentary, capturing the precision of modern engineering." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbEXeky4erGbKQ6r_K_04SZGaTeCiVqdipSm-pNNY4OWuIGjY5DvBrJYQGyM6DfKIN_w1-VuyV1MTe7b996WHhrJfzaHEiNjglZOgkOteiMKQS2bxCio-JrRH8K3tEqvXAyRk3O0GSDtnWBVtCI-rtbjzdIkFbvCJ_5YPgwsZbBHrIW8N_yVvcbNHseSZV0V4EvwCmz8MGs2MGlUDcjMf6_uDaCsq7SuiO62DrUel__BWmZQAZZcz0wg"/>
+</div>
+<div class="w-14 h-14 rounded-lg bg-surface-variant overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A wide-angle urban survey photograph showing a developing city block with paved roads and preliminary landscaping. The lighting is warm afternoon sun casting soft shadows. The composition is clean and technical, emphasizing spatial organization and boundary markers. The image reflects a high-end GIS documentation style with clear visibility of terrain details." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmsmqRkWOa_nX-NgcFYZyXiTzEN9c27o4zr-g-PPKEYxoYldrQZKR9bA1tPaBOLKSWaZgq4PTwb0n-fAtkkkgc74XEdduITg-TtRF6DIVyMcreq93OEQMWVyoyIXtavDpJimJdsw2RtVBHCMusdggMgoP2Hk0kcgywB5gN-RguReQgq8Tc-kzpEN3wSIfRWLjBIx13E-U2BY2LEG4abkqBpNKmYSOyywD2mL7dKFfE8R2CkDbM-OcUaQ"/>
+</div>
+<div class="w-14 h-14 rounded-lg bg-surface-variant overflow-hidden relative">
+<img class="w-full h-full object-cover" data-alt="A close-up technical inspection photo of a drainage system installation at a construction project. The image features high contrast and sharp detail of civil engineering components against the earth. The color palette consists of industrial grays, browns, and safety orange highlights. The overall atmosphere is focused on precision and professional field reporting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAapzVihPENqzwwBhobUYGMbHY6yctYlUruCJ3KeeL2n1ldAwoEAzK6pTpgryd5BlBT4d4ejEVtzUoFvxrM3a4tV2M0vqI60lfoLDlFZTFOUplGnGYKtw8owf5SjB77e0Dl5UwrfJftKlbDDR_qvjxwkSQL_ie3tlgUP3IClwPt9yF6jmyec8v6Wv5y5qfqgLRiWJgyEnBBmOjj9-BSKGsd185dSYP8U2zfwE_XRfcejSxEeDfjkLgO2w"/>
+<div class="absolute inset-0 bg-black/50 flex items-center justify-center text-white text-body-sm font-bold">+4</div>
+</div>
+</div>
+<div class="pt-2 border-t border-[#E0E0E0] flex justify-between items-center">
+<span class="text-body-sm text-[#6B7280] text-[12px]">8 Photos · 2 Videos</span>
+<button class="text-primary-container p-1 active:scale-90 transition-transform">
+<span class="material-symbols-outlined">ios_share</span>
+</button>
+</div>
+</div>
+<!-- Card 2: Road Survey -->
+<div class="bg-white border border-[#E0E0E0] rounded-[12px] p-4 flex flex-col gap-3">
+<div class="flex justify-between items-start">
+<h3 class="font-headline-md text-[16px] font-bold text-on-surface">Road Survey — Main Boulevard</h3>
+<span class="px-2 py-0.5 rounded-[4px] bg-[#D1FAE5] text-[#059669] text-[10px] font-bold uppercase tracking-wider">Exported</span>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-1 text-[#6B7280]">
+<span class="material-symbols-outlined text-[14px]">location_on</span>
+<span class="text-body-sm text-[12px]">Lahore, Punjab PK</span>
+</div>
+<div class="flex items-center gap-1 text-[#6B7280]">
+<span class="material-symbols-outlined text-[14px]">calendar_today</span>
+<span class="text-body-sm text-[12px]">20 Nov 2024 | 09:15 PKT</span>
+</div>
+</div>
+<div class="flex gap-2">
+<div class="w-14 h-14 rounded-lg bg-surface-variant overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A clean, direct overhead perspective of a newly asphalted road with pristine white lane markings. The morning light is bright and even, minimizing glare. The image has a professional topographic feel, capturing the texture of the pavement and surrounding green areas. The aesthetic is minimal and data-driven, perfect for a GIS mapping application." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAavu11Na3juBTf5OzXeXI0Y--3iiY2FUE6sVrcAPjqwwZRksgOah3fJxS1Rn-T8rKfd0FtIpSJVGc-nbt2zS2WoD8kPalc8kKCgyyYH6uzPTjbEQW4O4p6k7vuk7THzVnOW-NV4Bbf_o-ArziaNrnea05KNGz9NvZNt4ZzKAxcXvB3TPHN2lKepFLFLdx1OeLotUfnltu_SkniE39ZkGqQAMcZaw2ofphpONn9XU7rknh-duzpsk5TzQ"/>
+</div>
+<div class="w-14 h-14 rounded-lg bg-surface-variant overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A professional ground-level photograph of an urban intersection during morning hours. The shot captures clear traffic signals and pedestrian crossings against a backdrop of modern glass buildings. The lighting is soft and natural. The image style is systematic and clean, focusing on infrastructure quality and traffic management layouts." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIb3B96CleqmJhYs2ZK5odx8yvmepvgWzI8KwiQVHVgUt2n017Ddz_i2EWy_NKfzzpcx1QZEzORyhWxmM0gb03dvxlkGjsCbmJ-tf-YrF93i-ntgTehdzQI55g4jNwGCR78aQ5S-Id4cbZrc_48CEQjbKGbsxezEDd4yA027X29EMnne_22MSsGEybSuzTXcdCfjudQjnGIZzQSeKiZkufVXRPfzugkVkJPGzv2ONdQPso2Xx9mWlGfw"/>
+</div>
+<div class="w-14 h-14 rounded-lg bg-surface-variant overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="An industrial survey photo focusing on utility markings on a concrete sidewalk. The image uses sharp focus and high contrast to emphasize blue and yellow paint indicators. The visual style is purely functional and detailed, showing surrounding asphalt and brickwork. The mood is efficient and professionally documented for urban planning reports." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnop1wuLa7kTY9F2vz-FM9p40N0XSCMljC6GzZbV1-EsJBCOhQnu5fjPssG2SFlSsyBfq_0YexqVjUbi185MMVvCHrzdtaHlsYphLUG6oDIYGG6a4R2mJ6e8ILzqEKjlQzUYtSOqwGAUNjNuwesJRzWCGLSEe5w_dWQBmh3feiMFBY3VmG78nz0yZIPmLjjaW2LFn9hz4XmC6XUVR8zJSoflhrXxTZ6ZSkVKF1nwtHDmTpS_ZN7ycBQQ"/>
+</div>
+</div>
+<div class="pt-2 border-t border-[#E0E0E0] flex justify-between items-center">
+<span class="text-body-sm text-[#6B7280] text-[12px]">12 Photos · 0 Videos</span>
+<button class="text-primary-container p-1 active:scale-90 transition-transform">
+<span class="material-symbols-outlined">ios_share</span>
+</button>
+</div>
+</div>
+<!-- Card 3: Pipeline Check -->
+<div class="bg-white border border-[#E0E0E0] rounded-[12px] p-4 flex flex-col gap-3">
+<div class="flex justify-between items-start">
+<h3 class="font-headline-md text-[16px] font-bold text-on-surface">Pipeline Check — Zone 3</h3>
+<span class="px-2 py-0.5 rounded-[4px] bg-[#DBEAFE] text-[#2563EB] text-[10px] font-bold uppercase tracking-wider">Shared</span>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-1 text-[#6B7280]">
+<span class="material-symbols-outlined text-[14px]">location_on</span>
+<span class="text-body-sm text-[12px]">Islamabad, PK</span>
+</div>
+<div class="flex items-center gap-1 text-[#6B7280]">
+<span class="material-symbols-outlined text-[14px]">calendar_today</span>
+<span class="text-body-sm text-[12px]">19 Nov 2024 | 11:45 PKT</span>
+</div>
+</div>
+<div class="flex gap-2">
+<div class="w-14 h-14 rounded-lg bg-surface-variant overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A sharp technical photograph of large diameter steel pipes lined up at a staging area. The lighting is bright overcast daylight, providing even illumination on metallic surfaces. The composition follows a rhythmic pattern of circular shapes. The color palette is dominated by industrial blues, silvers, and grays, representing a precise civil engineering project." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJbPK5bCSUSEgLivFwqyxJmzJv8PshtXU8He5srtE-ehmWEiL2Sz7yM3EckoPRwd-_q76-kbUxAbioW_JVy3EKeImzMb97mlahA7-oOZ3lEwU8ovl72Q_gqzPATzpFNW3QBFuzxeIsmAaqVND2oarYkHXTb04ea6nVLtFrDhM-EZ7Z2J0qLdLmsxpnkSITviLt-CipNnYKkCw30TaSu9oU1vcVe7SW2F1K-d3jjmBwzezsE4OtfbCBqw"/>
+</div>
+<div class="w-14 h-14 rounded-lg bg-surface-variant overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A focused image of a digital flow meter attached to an industrial valve system. The shot is high-detail, showing numerical readouts and mechanical connections. The background is softly blurred to emphasize the monitoring equipment. The visual style is technological and precise, reflecting professional equipment maintenance documentation." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDphEHNt2rHfiPFGdy-Q-8NmoJgGcQY_FiWTCTqWvbPxyb5I0P6n3SfWyOLcRWELcXvm9_GShnjMa7STAfGyqhhkR5A_fcD52xNGVSS9L9XBUETA1WDp8_T0XmVlUNoex_jwoMBvwpP_nBWAhmUYpLe7u5UUtGgUBwBq-mOJd3P3mFOUaZHHKp7xt3DDFBgJ6fC0hv08Qk-SGEJP4FzTT8c_72oPSneBz0UekbIRPIulPp854-T-oUe-Q"/>
+</div>
+<div class="w-14 h-14 rounded-lg bg-surface-variant overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A landscape survey photo showing an open trench with utility pipes installed across a suburban field. The lighting is natural midday sun with clear visibility of terrain and excavation detail. The photo is composed to show the trajectory of the pipeline, providing a clear visual record for project managers and surveyors." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrHyPuXxw1gVA4bcqhHYyBTdXAEcKP4fgPB-mApnpxjtoGNBKfD8kdsUn_zrjVxc1qbO3kP3Yal7oGvAVQbd5AeQBJe6vbZOZNEmvR32jTN9LIuiGaNUxSBrWXD69iliIUbNuWuO2UASdexR6GcQMsUrU9eALuCdSKS5gZlsHenCv9tDrQQ9Ru9iihS8M4QpomdiUFQEI_GJQiObkr_wITnzgTXtTuGUr719JvKv-6QaNfaInoIQUVww"/>
+</div>
+</div>
+<div class="pt-2 border-t border-[#E0E0E0] flex justify-between items-center">
+<span class="text-body-sm text-[#6B7280] text-[12px]">5 Photos · 1 Video</span>
+<button class="text-primary-container p-1 active:scale-90 transition-transform">
+<span class="material-symbols-outlined">ios_share</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 bg-surface border-t border-outline-variant">
+<div class="flex justify-around items-center h-16 w-full px-space-sm">
+<!-- Camera -->
+<button class="flex flex-col items-center justify-center text-on-surface-variant active:scale-95 transition-transform duration-150">
+<span class="material-symbols-outlined">photo_camera</span>
+<span class="text-[10px] font-bold uppercase tracking-wider mt-1">Camera</span>
+</button>
+<!-- Collection -->
+<button class="flex flex-col items-center justify-center text-on-surface-variant active:scale-95 transition-transform duration-150">
+<span class="material-symbols-outlined">grid_view</span>
+<span class="text-[10px] font-bold uppercase tracking-wider mt-1">Collection</span>
+</button>
+<!-- Reporting (Active) -->
+<button class="flex flex-col items-center justify-center text-primary-container font-bold active:scale-95 transition-transform duration-150 active-dot">
+<span class="material-symbols-outlined">assessment</span>
+<span class="text-[10px] font-bold uppercase tracking-wider mt-1">Reporting</span>
+</button>
+<!-- Templates -->
+<button class="flex flex-col items-center justify-center text-on-surface-variant active:scale-95 transition-transform duration-150">
+<span class="material-symbols-outlined">layers</span>
+<span class="text-[10px] font-bold uppercase tracking-wider mt-1">Templates</span>
+</button>
+</div>
+</nav>
+<script>
+        // Micro-interaction: Active state for filter chips
+        const filterChips = document.querySelectorAll('.scrollbar-hide button');
+        filterChips.forEach(chip => {
+            chip.addEventListener('click', () => {
+                filterChips.forEach(c => {
+                    c.classList.remove('bg-primary-container', 'text-white');
+                    c.classList.add('bg-[#F3F4F6]', 'text-on-surface-variant');
+                });
+                chip.classList.remove('bg-[#F3F4F6]', 'text-on-surface-variant');
+                chip.classList.add('bg-primary-container', 'text-white');
+            });
+        });
+    </script>
+</body></html>

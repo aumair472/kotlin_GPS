@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_tagline">التقط. حدد الموقع. أبلغ.</string>
+
+    <string name="action_continue">متابعة</string>
+    <string name="action_next">التالي</string>
+    <string name="action_skip">تخطّي</string>
+    <string name="action_get_started">ابدأ الآن</string>
+    <string name="action_close">إغلاق</string>
+    <string name="action_retry">إعادة المحاولة</string>
+    <string name="action_cancel">إلغاء</string>
+    <string name="action_delete">حذف</string>
+    <string name="action_share">مشاركة</string>
+    <string name="action_settings">الإعدادات</string>
+
+    <string name="language_title">اختر اللغة</string>
+    <string name="language_heading">اختر لغتك</string>
+    <string name="language_subtitle">يمكنك تغيير ذلك لاحقًا في الإعدادات</string>
+
+    <string name="onboarding_1_title">اطبع الموقع الجغرافي على كل صورة</string>
+    <string name="onboarding_1_body">أضِف الموقع والتاريخ والوقت تلقائيًا إلى كل صورة وفيديو تلتقطه. مثالي للعمل الميداني والتوثيق.</string>
+    <string name="onboarding_2_title">الموقع في الوقت الفعلي</string>
+    <string name="onboarding_2_body">شاهد إحداثياتك الدقيقة والارتفاع والدقة مباشرةً قبل الالتقاط.</string>
+    <string name="onboarding_3_title">أنشئ تقارير ميدانية</string>
+    <string name="onboarding_3_body">اجمع اللقطات في تقارير، وأضِف ملاحظات، وصدّر ملفات PDF قابلة للمشاركة بدليل موقع جغرافي.</string>
+    <string name="onboarding_step_indicator">الخطوة %1$d من %2$d</string>
+
+    <string name="nav_camera">الكاميرا</string>
+    <string name="nav_collection">المجموعة</string>
+    <string name="nav_reporting">التقارير</string>
+    <string name="nav_templates">القوالب</string>
+
+    <string name="settings_title">الإعدادات</string>
+    <string name="settings_preferences">التفضيلات</string>
+    <string name="settings_language">اللغة</string>
+    <string name="settings_share_app">مشاركة التطبيق</string>
+    <string name="settings_privacy">سياسة الخصوصية</string>
+    <string name="settings_terms">الشروط والأحكام</string>
+    <string name="settings_version">الإصدار %1$s</string>
+
+    <string name="camera_gps_acquiring">جارٍ تحديد الموقع…</string>
+    <string name="camera_gps_precise">تم تحديد الموقع</string>
+    <string name="camera_gps_unavailable">الموقع غير متاح</string>
+</resources>

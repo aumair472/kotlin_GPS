@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>GeoSnap Onboarding - Step 3</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&amp;family=Geist:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-primary": "#b4c5ff",
+                    "secondary-container": "#dce2f3",
+                    "on-error": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "tertiary-fixed-dim": "#ffb596",
+                    "primary": "#2563EB", /* Overriding to match prompt's #2563EB */
+                    "secondary-fixed-dim": "#c0c7d6",
+                    "primary-fixed": "#dbe1ff",
+                    "on-tertiary-fixed": "#360f00",
+                    "on-tertiary-container": "#ffede6",
+                    "surface-tint": "#0053db",
+                    "surface-container-lowest": "#ffffff",
+                    "primary-container": "#2563eb",
+                    "on-surface-variant": "#434655",
+                    "surface-bright": "#faf8ff",
+                    "on-surface": "#191b23",
+                    "on-secondary-fixed": "#151c27",
+                    "on-secondary": "#ffffff",
+                    "on-secondary-container": "#5e6572",
+                    "on-secondary-fixed-variant": "#404754",
+                    "outline-variant": "#c3c6d7",
+                    "primary-fixed-dim": "#b4c5ff",
+                    "on-primary-container": "#eeefff",
+                    "surface-container-low": "#f3f3fe",
+                    "inverse-on-surface": "#f0f0fb",
+                    "outline": "#737686",
+                    "surface-container": "#ededf9",
+                    "tertiary-fixed": "#ffdbcd",
+                    "error-container": "#ffdad6",
+                    "surface-container-highest": "#e1e2ed",
+                    "brand-navy": "#1A1A2E",
+                    "brand-gray-text": "#6B7280",
+                    "brand-light-blue": "#EFF6FF",
+                    "brand-accent-blue": "#93C5FD",
+                    "brand-footer-gray": "#9CA3AF"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem",
+                    "onboarding": "16px",
+                    "button": "24px"
+            },
+            "spacing": {
+                    "space-lg": "24px",
+                    "space-md": "16px",
+                    "space-xs": "4px",
+                    "space-xl": "40px",
+                    "space-sm": "8px",
+                    "margin-desktop": "32px",
+                    "margin-mobile": "16px",
+                    "gutter": "16px",
+                    "container-max-width": "1200px"
+            },
+            "fontFamily": {
+                    "mono-data": ["Geist"],
+                    "label-caps": ["Hanken Grotesk"],
+                    "headline-lg": ["Hanken Grotesk"],
+                    "headline-md": ["Hanken Grotesk"],
+                    "body-sm": ["Hanken Grotesk"],
+                    "headline-lg-mobile": ["Hanken Grotesk"],
+                    "body-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                    "mono-data": ["14px", {"lineHeight": "20px", "fontWeight": "500"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-lg": ["30px", {"lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "onboarding-desc": ["15px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            font-family: 'Hanken Grotesk', sans-serif;
+            background-color: #FFFFFF;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Layout constraint to simulate mobile device view */
+        .mobile-container {
+            max-width: 430px;
+            margin: 0 auto;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-white text-on-surface">
+<div class="mobile-container relative bg-white">
+<!-- Top App Bar (As per JSON hierarchy, but suppressed/modified for Onboarding flow per instructions) -->
+<header class="flex justify-between items-center px-6 py-6 w-full">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="camera_enhance">camera_enhance</span>
+<span class="font-headline-md text-headline-md text-primary font-extrabold tracking-tight">GeoSnap</span>
+</div>
+<!-- Skip button is absent as per prompt instructions for Step 3 -->
+</header>
+<!-- Upper Section: Illustration (45% height) -->
+<section class="px-6 h-[397px] flex items-center justify-center">
+<div class="w-full h-full bg-brand-light-blue rounded-onboarding flex flex-col items-center justify-center relative">
+<!-- Flat Icon Composition -->
+<div class="relative mb-6">
+<!-- Document Icon -->
+<span class="material-symbols-outlined text-[100px] text-primary" data-icon="description" style="font-variation-settings: 'wght' 200;">description</span>
+<!-- Checkmark Circle Overlay -->
+<div class="absolute -top-1 -right-1 bg-white rounded-full p-1">
+<span class="material-symbols-outlined text-primary text-[32px] block" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+</div>
+<!-- Report Text Lines -->
+<div class="flex flex-col gap-2.5 items-center w-full px-12">
+<div class="h-2 bg-brand-accent-blue rounded-full w-4/5"></div>
+<div class="h-2 bg-brand-accent-blue rounded-full w-2/3"></div>
+<div class="h-2 bg-brand-accent-blue rounded-full w-1/2"></div>
+</div>
+</div>
+</section>
+<!-- Middle Section: Indicators and Copy -->
+<section class="flex-grow px-margin-mobile flex flex-col items-center justify-center text-center mt-8">
+<!-- Step Indicators -->
+<div class="flex gap-2 mb-8">
+<div class="w-2.5 h-2.5 rounded-full bg-[#D1D5DB]"></div>
+<div class="w-2.5 h-2.5 rounded-full bg-[#D1D5DB]"></div>
+<div class="w-2.5 h-2.5 rounded-full bg-primary"></div>
+</div>
+<!-- Content -->
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-brand-navy mb-4 font-bold">
+                Generate Reports Instantly
+            </h1>
+<p class="font-body-lg text-onboarding-desc text-brand-gray-text px-2">
+                Organize your captured photos into professional reports with GPS data, timestamps and notes. Export and share with your team in one tap.
+            </p>
+</section>
+<!-- Bottom Section: Actions -->
+<footer class="px-margin-mobile pb-10 flex flex-col items-center gap-4">
+<button class="w-full bg-primary text-white py-4 rounded-[24px] font-bold text-lg active:scale-[0.98] transition-transform duration-100 shadow-sm">
+                Get Started
+            </button>
+<p class="text-brand-footer-gray text-[12px] font-medium uppercase tracking-widest">
+                Step 3 of 3
+            </p>
+</footer>
+</div>
+<!-- Micro-interaction script -->
+<script>
+        document.querySelector('button').addEventListener('click', function() {
+            this.innerHTML = '<span class="inline-block animate-spin mr-2">◌</span> Preparing...';
+            setTimeout(() => {
+                this.innerHTML = 'Get Started';
+                console.log('Onboarding Complete');
+            }, 800);
+        });
+    </script>
+</body></html>

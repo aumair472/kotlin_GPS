@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <!-- Exported PDF reports shared via FileProvider content URIs (never file://). -->
+    <cache-path name="exports" path="exports/" />
+    <files-path name="reports" path="reports/" />
+    <!-- Private capture scratch space (pre-finalization temp files). -->
+    <cache-path name="captures" path="captures/" />
+</paths>

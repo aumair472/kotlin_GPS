@@ -1,0 +1,681 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "bf926a46d49419c09d8cb84b8017bd72",
+    "entities": [
+      {
+        "tableName": "media_items",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `kind` TEXT NOT NULL, `status` TEXT NOT NULL, `content_uri` TEXT, `source_uri` TEXT, `display_name` TEXT NOT NULL, `mime_type` TEXT NOT NULL, `captured_at_epoch_ms` INTEGER NOT NULL, `timezone_id` TEXT NOT NULL, `duration_ms` INTEGER, `width` INTEGER, `height` INTEGER, `size_bytes` INTEGER, `orientation_degrees` INTEGER NOT NULL, `template_id` TEXT NOT NULL, `template_version` INTEGER NOT NULL, `rendered_stamp` TEXT, `location_id` TEXT, `address_search_text` TEXT, `thumbnail_uri` TEXT, `checksum_sha256` TEXT, `created_at_epoch_ms` INTEGER NOT NULL, `updated_at_epoch_ms` INTEGER NOT NULL, `failure_code` TEXT, PRIMARY KEY(`id`), FOREIGN KEY(`location_id`) REFERENCES `locations`(`id`) ON UPDATE NO ACTION ON DELETE SET NULL )",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "kind",
+            "columnName": "kind",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "status",
+            "columnName": "status",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "contentUri",
+            "columnName": "content_uri",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "sourceUri",
+            "columnName": "source_uri",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "displayName",
+            "columnName": "display_name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "mimeType",
+            "columnName": "mime_type",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "capturedAtEpochMs",
+            "columnName": "captured_at_epoch_ms",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "timezoneId",
+            "columnName": "timezone_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "durationMs",
+            "columnName": "duration_ms",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "width",
+            "columnName": "width",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "height",
+            "columnName": "height",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "sizeBytes",
+            "columnName": "size_bytes",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "orientationDegrees",
+            "columnName": "orientation_degrees",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "templateId",
+            "columnName": "template_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "templateVersion",
+            "columnName": "template_version",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "renderedStamp",
+            "columnName": "rendered_stamp",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "locationId",
+            "columnName": "location_id",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "addressSearchText",
+            "columnName": "address_search_text",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "thumbnailUri",
+            "columnName": "thumbnail_uri",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "checksumSha256",
+            "columnName": "checksum_sha256",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "createdAtEpochMs",
+            "columnName": "created_at_epoch_ms",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "updatedAtEpochMs",
+            "columnName": "updated_at_epoch_ms",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "failureCode",
+            "columnName": "failure_code",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_media_items_captured_at_epoch_ms",
+            "unique": false,
+            "columnNames": [
+              "captured_at_epoch_ms"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_media_items_captured_at_epoch_ms` ON `${TABLE_NAME}` (`captured_at_epoch_ms`)"
+          },
+          {
+            "name": "index_media_items_kind",
+            "unique": false,
+            "columnNames": [
+              "kind"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_media_items_kind` ON `${TABLE_NAME}` (`kind`)"
+          },
+          {
+            "name": "index_media_items_status",
+            "unique": false,
+            "columnNames": [
+              "status"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_media_items_status` ON `${TABLE_NAME}` (`status`)"
+          },
+          {
+            "name": "index_media_items_location_id",
+            "unique": false,
+            "columnNames": [
+              "location_id"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_media_items_location_id` ON `${TABLE_NAME}` (`location_id`)"
+          },
+          {
+            "name": "index_media_items_address_search_text",
+            "unique": false,
+            "columnNames": [
+              "address_search_text"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_media_items_address_search_text` ON `${TABLE_NAME}` (`address_search_text`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "locations",
+            "onDelete": "SET NULL",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "location_id"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "locations",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `latitude` REAL NOT NULL, `longitude` REAL NOT NULL, `altitude_m` REAL, `accuracy_m` REAL, `provider_time_ms` INTEGER, `observed_at_ms` INTEGER NOT NULL, `timezone_id` TEXT NOT NULL, `is_approximate` INTEGER NOT NULL, `is_mock` INTEGER NOT NULL, `provider` TEXT, `locality` TEXT, `admin_area` TEXT, `country_code` TEXT, `formatted_address` TEXT, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "latitude",
+            "columnName": "latitude",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "longitude",
+            "columnName": "longitude",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "altitudeM",
+            "columnName": "altitude_m",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "accuracyM",
+            "columnName": "accuracy_m",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "providerTimeMs",
+            "columnName": "provider_time_ms",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "observedAtMs",
+            "columnName": "observed_at_ms",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "timezoneId",
+            "columnName": "timezone_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "isApproximate",
+            "columnName": "is_approximate",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "isMock",
+            "columnName": "is_mock",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "provider",
+            "columnName": "provider",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "locality",
+            "columnName": "locality",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "adminArea",
+            "columnName": "admin_area",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "countryCode",
+            "columnName": "country_code",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "formattedAddress",
+            "columnName": "formatted_address",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "reports",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `title` TEXT NOT NULL, `notes` TEXT NOT NULL, `status` TEXT NOT NULL, `report_location_id` TEXT, `report_instant_ms` INTEGER NOT NULL, `timezone_id` TEXT NOT NULL, `created_at_ms` INTEGER NOT NULL, `updated_at_ms` INTEGER NOT NULL, PRIMARY KEY(`id`), FOREIGN KEY(`report_location_id`) REFERENCES `locations`(`id`) ON UPDATE NO ACTION ON DELETE SET NULL )",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "title",
+            "columnName": "title",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "notes",
+            "columnName": "notes",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "status",
+            "columnName": "status",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "reportLocationId",
+            "columnName": "report_location_id",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "reportInstantMs",
+            "columnName": "report_instant_ms",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "timezoneId",
+            "columnName": "timezone_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "createdAtMs",
+            "columnName": "created_at_ms",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "updatedAtMs",
+            "columnName": "updated_at_ms",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_reports_status",
+            "unique": false,
+            "columnNames": [
+              "status"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_reports_status` ON `${TABLE_NAME}` (`status`)"
+          },
+          {
+            "name": "index_reports_report_location_id",
+            "unique": false,
+            "columnNames": [
+              "report_location_id"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_reports_report_location_id` ON `${TABLE_NAME}` (`report_location_id`)"
+          },
+          {
+            "name": "index_reports_updated_at_ms",
+            "unique": false,
+            "columnNames": [
+              "updated_at_ms"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_reports_updated_at_ms` ON `${TABLE_NAME}` (`updated_at_ms`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "locations",
+            "onDelete": "SET NULL",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "report_location_id"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "report_media",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`report_id` TEXT NOT NULL, `media_id` TEXT NOT NULL, `sort_order` INTEGER NOT NULL, `caption` TEXT, `included` INTEGER NOT NULL, PRIMARY KEY(`report_id`, `media_id`), FOREIGN KEY(`report_id`) REFERENCES `reports`(`id`) ON UPDATE NO ACTION ON DELETE CASCADE , FOREIGN KEY(`media_id`) REFERENCES `media_items`(`id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "reportId",
+            "columnName": "report_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "mediaId",
+            "columnName": "media_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sortOrder",
+            "columnName": "sort_order",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "caption",
+            "columnName": "caption",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "included",
+            "columnName": "included",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "report_id",
+            "media_id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_report_media_report_id",
+            "unique": false,
+            "columnNames": [
+              "report_id"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_report_media_report_id` ON `${TABLE_NAME}` (`report_id`)"
+          },
+          {
+            "name": "index_report_media_media_id",
+            "unique": false,
+            "columnNames": [
+              "media_id"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_report_media_media_id` ON `${TABLE_NAME}` (`media_id`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "reports",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "report_id"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          },
+          {
+            "table": "media_items",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "media_id"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "report_exports",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `report_id` TEXT NOT NULL, `status` TEXT NOT NULL, `output_uri` TEXT, `mime_type` TEXT NOT NULL, `size_bytes` INTEGER, `checksum_sha256` TEXT, `created_at_ms` INTEGER NOT NULL, `completed_at_ms` INTEGER, `shared_at_ms` INTEGER, `error_code` TEXT, PRIMARY KEY(`id`), FOREIGN KEY(`report_id`) REFERENCES `reports`(`id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "reportId",
+            "columnName": "report_id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "status",
+            "columnName": "status",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "outputUri",
+            "columnName": "output_uri",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mimeType",
+            "columnName": "mime_type",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sizeBytes",
+            "columnName": "size_bytes",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "checksumSha256",
+            "columnName": "checksum_sha256",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "createdAtMs",
+            "columnName": "created_at_ms",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "completedAtMs",
+            "columnName": "completed_at_ms",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "sharedAtMs",
+            "columnName": "shared_at_ms",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "errorCode",
+            "columnName": "error_code",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_report_exports_report_id",
+            "unique": false,
+            "columnNames": [
+              "report_id"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_report_exports_report_id` ON `${TABLE_NAME}` (`report_id`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "reports",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "report_id"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          }
+        ]
+      },
+      {
+        "tableName": "templates",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `version` INTEGER NOT NULL, `category` TEXT NOT NULL, `config_json` TEXT NOT NULL, `is_built_in` INTEGER NOT NULL, `is_active` INTEGER NOT NULL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "version",
+            "columnName": "version",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "category",
+            "columnName": "category",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "configJson",
+            "columnName": "config_json",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "isBuiltIn",
+            "columnName": "is_built_in",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "isActive",
+            "columnName": "is_active",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'bf926a46d49419c09d8cb84b8017bd72')"
+    ]
+  }
+}

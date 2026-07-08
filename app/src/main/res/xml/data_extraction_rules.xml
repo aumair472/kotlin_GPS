@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data-extraction-rules>
+    <cloud-backup>
+        <exclude domain="database" path="geosnap.db" />
+        <exclude domain="sharedpref" path="." />
+        <exclude domain="file" path="datastore/" />
+        <exclude domain="file" path="reports/" />
+    </cloud-backup>
+    <device-transfer>
+        <exclude domain="file" path="datastore/" />
+    </device-transfer>
+</data-extraction-rules>

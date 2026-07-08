@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_tagline">کیپچر کریں۔ مقام جانیں۔ رپورٹ کریں۔</string>
+
+    <string name="action_continue">جاری رکھیں</string>
+    <string name="action_next">اگلا</string>
+    <string name="action_skip">چھوڑیں</string>
+    <string name="action_get_started">شروع کریں</string>
+    <string name="action_close">بند کریں</string>
+    <string name="action_retry">دوبارہ کوشش کریں</string>
+    <string name="action_cancel">منسوخ کریں</string>
+    <string name="action_delete">حذف کریں</string>
+    <string name="action_share">شیئر کریں</string>
+    <string name="action_settings">ترتیبات</string>
+
+    <string name="language_title">زبان منتخب کریں</string>
+    <string name="language_heading">اپنی زبان منتخب کریں</string>
+    <string name="language_subtitle">آپ اسے بعد میں ترتیبات میں تبدیل کر سکتے ہیں</string>
+
+    <string name="onboarding_1_title">ہر تصویر پر GPS کا نشان لگائیں</string>
+    <string name="onboarding_1_body">ہر تصویر اور ویڈیو میں مقام، تاریخ اور وقت خودکار طور پر شامل کریں۔ فیلڈ ورک اور دستاویزات کے لیے بہترین۔</string>
+    <string name="onboarding_2_title">حقیقی وقت میں مقام</string>
+    <string name="onboarding_2_body">کیپچر سے پہلے اپنے درست نقاط، بلندی اور درستگی براہِ راست دیکھیں۔</string>
+    <string name="onboarding_3_title">فیلڈ رپورٹس بنائیں</string>
+    <string name="onboarding_3_body">کیپچرز کو رپورٹس میں جمع کریں، نوٹس شامل کریں اور GPS ثبوت کے ساتھ قابلِ اشتراک PDF برآمد کریں۔</string>
+    <string name="onboarding_step_indicator">مرحلہ %1$d از %2$d</string>
+
+    <string name="nav_camera">کیمرہ</string>
+    <string name="nav_collection">مجموعہ</string>
+    <string name="nav_reporting">رپورٹنگ</string>
+    <string name="nav_templates">ٹیمپلیٹس</string>
+
+    <string name="settings_title">ترتیبات</string>
+    <string name="settings_preferences">ترجیحات</string>
+    <string name="settings_language">زبان</string>
+    <string name="settings_share_app">ایپ شیئر کریں</string>
+    <string name="settings_privacy">رازداری کی پالیسی</string>
+    <string name="settings_terms">شرائط و ضوابط</string>
+    <string name="settings_version">ورژن %1$s</string>
+
+    <string name="camera_gps_acquiring">مقام حاصل کیا جا رہا ہے…</string>
+    <string name="camera_gps_precise">GPS طے شدہ</string>
+    <string name="camera_gps_unavailable">مقام دستیاب نہیں</string>
+</resources>

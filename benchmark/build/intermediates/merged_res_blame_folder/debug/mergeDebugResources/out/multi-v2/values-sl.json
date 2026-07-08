@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.geosnap.benchmark-mergeDebugResources-2:/values-sl/values-sl.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\umair\\.gradle\\caches\\8.11.1\\transforms\\9469018ba6e4b6f312b42d2ffc10d2c4\\transformed\\core-1.9.0\\res\\values-sl\\values-sl.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,56 @@
+# GeoSnap Documentation Index
+## Core engineering contracts
+- [`README.md`](./README.md)
+- [`CLAUDE.md`](./CLAUDE.md)
+- [`AGENTS.md`](./AGENTS.md)
+- [`ARCHITECTURE.md`](./ARCHITECTURE.md)
+- [`SYSTEM_DESIGN.md`](./SYSTEM_DESIGN.md)
+- [`CODEBASE_STRUCTURE.md`](./CODEBASE_STRUCTURE.md)
+- [`BUILD_SETUP.md`](./BUILD_SETUP.md)
+- [`DESIGN_SYSTEM.md`](./DESIGN_SYSTEM.md)
+- [`UI_SCREEN_SPECS.md`](./UI_SCREEN_SPECS.md)
+- [`NAVIGATION.md`](./NAVIGATION.md)
+- [`FEATURES.md`](./FEATURES.md)
+- [`CAMERA_GPS_PIPELINE.md`](./CAMERA_GPS_PIPELINE.md)
+- [`DATA_MODEL.md`](./DATA_MODEL.md)
+- [`DATABASE.md`](./DATABASE.md)
+- [`PERMISSIONS_PRIVACY.md`](./PERMISSIONS_PRIVACY.md)
+- [`SECURITY.md`](./SECURITY.md)
+- [`PERFORMANCE.md`](./PERFORMANCE.md)
+- [`LOCALIZATION.md`](./LOCALIZATION.md)
+- [`REPORTING_EXPORT.md`](./REPORTING_EXPORT.md)
+- [`OBSERVABILITY.md`](./OBSERVABILITY.md)
+- [`CI_CD.md`](./CI_CD.md)
+- [`PLAY_STORE_RELEASE.md`](./PLAY_STORE_RELEASE.md)
+- [`FUTURE_CLOUD_ARCHITECTURE.md`](./FUTURE_CLOUD_ARCHITECTURE.md)
+- [`CONTEXT_ENGINEER.md`](./CONTEXT_ENGINEER.md)
+- [`LOOP_ENGINEER.md`](./LOOP_ENGINEER.md)
+- [`PHASES.md`](./PHASES.md)
+- [`TASKS.md`](./TASKS.md)
+- [`QA_TESTING.md`](./QA_TESTING.md)
+- [`DEFINITION_OF_DONE.md`](./DEFINITION_OF_DONE.md)
+- [`ASSET_INTEGRATION.md`](./ASSET_INTEGRATION.md)
+- [`SCREENSHOT_INDEX.md`](./SCREENSHOT_INDEX.md)
+- [`SOURCE_RESEARCH.md`](./SOURCE_RESEARCH.md)
+- [`MASTER_PROMPT.md`](./MASTER_PROMPT.md)
+- [`COMPACT_GOAL_PROMPT.md`](./COMPACT_GOAL_PROMPT.md)
+
+## Screen/phase prompts
+- [`prompts/00_PROJECT_BOOTSTRAP.md`](./prompts/00_PROJECT_BOOTSTRAP.md)
+- [`prompts/01_SPLASH_LANGUAGE_ONBOARDING.md`](./prompts/01_SPLASH_LANGUAGE_ONBOARDING.md)
+- [`prompts/02_CAMERA_SCREEN.md`](./prompts/02_CAMERA_SCREEN.md)
+- [`prompts/03_VIDEO_CAPTURE.md`](./prompts/03_VIDEO_CAPTURE.md)
+- [`prompts/04_COLLECTION.md`](./prompts/04_COLLECTION.md)
+- [`prompts/05_REPORTING.md`](./prompts/05_REPORTING.md)
+- [`prompts/06_PDF_EXPORT_SHARE.md`](./prompts/06_PDF_EXPORT_SHARE.md)
+- [`prompts/07_TEMPLATES_SETTINGS.md`](./prompts/07_TEMPLATES_SETTINGS.md)
+- [`prompts/08_SECURITY_PERFORMANCE_QA.md`](./prompts/08_SECURITY_PERFORMANCE_QA.md)
+- [`prompts/09_FINAL_PRODUCTION_AUDIT.md`](./prompts/09_FINAL_PRODUCTION_AUDIT.md)
+
+## Checklists
+- [`checklists/PERMISSION_MATRIX.md`](./checklists/PERMISSION_MATRIX.md)
+- [`checklists/RELEASE_CHECKLIST.md`](./checklists/RELEASE_CHECKLIST.md)
+
+## Visual references
+
+See `reference_screenshots/` and `SCREENSHOT_INDEX.md`.

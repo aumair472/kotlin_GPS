@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="geosnap_blue">#2563EB</color>
+    <color name="geosnap_blue_deep">#004AC6</color>
+    <color name="white">#FFFFFF</color>
+    <color name="splash_background">#FFFFFF</color>
+    <color name="ic_launcher_background">#2563EB</color>
+</resources>

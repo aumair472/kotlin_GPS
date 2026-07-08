@@ -13,3 +13,10 @@ keystore.properties
 *.keystore
 *.jks
 /app/lint-baseline.xml
+
+# Internal planning docs / design assets - kept locally, not pushed
+/stitch_geosnap/
+/docs/
+/GPS Icon.png
+/*.md
+!/README.md

@@ -46,7 +46,7 @@ fun GeoSnapTopBar(
             modifier = Modifier
                 .fillMaxWidth()
                 .statusBarsPadding()
-                .height(48.dp)
+                .height(44.dp)
                 .padding(horizontal = Spacing.xs),
             verticalAlignment = Alignment.CenterVertically,
         ) {
@@ -66,7 +66,7 @@ fun GeoSnapTopBar(
                 color = MaterialTheme.colorScheme.onSurface,
                 maxLines = 1,
                 overflow = TextOverflow.Ellipsis,
-                modifier = Modifier.weight(1f).padding(start = Spacing.sm),
+                modifier = Modifier.weight(1f).padding(start = Spacing.xs),
             )
             Row(verticalAlignment = Alignment.CenterVertically) { actions() }
         }

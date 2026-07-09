@@ -27,12 +27,20 @@ class SplashViewModel @Inject constructor(
     init {
         viewModelScope.launch {
             val prefs = settings.preferences.first()
-            // Re-apply any persisted, valid locale so a returning user keeps their language even if
-            // the per-app locale store was cleared.
-            prefs.selectedLocaleTag
-                ?.let { AppLanguage.fromTag(it) }
-                ?.takeIf { localeManager.currentTag().isNullOrEmpty() }
-                ?.let { localeManager.applyLanguageTag(it.tag) }
+            val activeTag = localeManager.currentTag()
+            if (activeTag.isNullOrEmpty()) {
+                // Re-apply any persisted, valid locale so a returning user keeps their language even
+                // if the per-app locale store was cleared.
+                prefs.selectedLocaleTag
+                    ?.let { AppLanguage.fromTag(it) }
+                    ?.let { localeManager.applyLanguageTag(it.tag) }
+            } else if (activeTag != prefs.selectedLocaleTag) {
+                // AppCompat already has a real applied locale (e.g. auto-restored by the OS from a
+                // previous session) that disagrees with our own DataStore record. The real applied
+                // locale wins; sync DataStore to match so UI reading DataStore (e.g. Settings) never
+                // shows a stale language while the app actually renders in a different one.
+                settings.setSelectedLanguage(activeTag)
+            }
             _startRoute.value = StartupResolver.startRoute(prefs)
         }
     }

@@ -97,7 +97,7 @@ fun ReportingScreen(
             } else {
                 LazyColumn(
                     contentPadding = androidx.compose.foundation.layout.PaddingValues(Spacing.md),
-                    verticalArrangement = Arrangement.spacedBy(Spacing.md),
+                    verticalArrangement = Arrangement.spacedBy(Spacing.sm),
                 ) {
                     item {
                         Text(
@@ -137,7 +137,7 @@ private fun ReportCard(report: ReportSummary, onClick: () -> Unit) {
             }
             IconText(Icons.Filled.CalendarMonth, formatInstant(report))
             if (report.previewThumbnailUris.isNotEmpty()) {
-                Row(modifier = Modifier.padding(top = Spacing.sm), horizontalArrangement = Arrangement.spacedBy(Spacing.sm)) {
+                Row(modifier = Modifier.padding(top = Spacing.xs), horizontalArrangement = Arrangement.spacedBy(Spacing.sm)) {
                     report.previewThumbnailUris.take(3).forEach { uri ->
                         AsyncImage(
                             model = uri,
@@ -152,7 +152,7 @@ private fun ReportCard(report: ReportSummary, onClick: () -> Unit) {
                 text = stringResource(R.string.report_media_counts, report.photoCount, report.videoCount),
                 style = MaterialTheme.typography.bodySmall,
                 color = GeoSnapPalette.NeutralGray,
-                modifier = Modifier.padding(top = Spacing.sm),
+                modifier = Modifier.padding(top = Spacing.xs),
             )
         }
     }

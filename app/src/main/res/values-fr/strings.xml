@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Caméra GPS : Horodatage et Carte</string>
+    <string name="app_tagline">Capturez. Localisez. Signalez.</string>
+
+    <string name="action_continue">Continuer</string>
+    <string name="action_next">Suivant</string>
+    <string name="action_skip">Ignorer</string>
+    <string name="action_get_started">Commencer</string>
+    <string name="action_back">Retour</string>
+    <string name="action_close">Fermer</string>
+    <string name="action_retry">Réessayer</string>
+    <string name="action_cancel">Annuler</string>
+    <string name="action_delete">Supprimer</string>
+    <string name="action_share">Partager</string>
+    <string name="action_save">Enregistrer</string>
+    <string name="action_settings">Paramètres</string>
+    <string name="action_open_settings">Ouvrir les paramètres</string>
+    <string name="action_select_all">Tout sélectionner</string>
+
+    <string name="language_title">Choisir la langue</string>
+    <string name="language_heading">Choisissez votre langue</string>
+    <string name="language_subtitle">Vous pourrez la modifier plus tard dans les paramètres</string>
+
+    <string name="onboarding_1_title">Horodatez chaque photo avec le GPS</string>
+    <string name="onboarding_1_body">Ajoutez automatiquement l\'emplacement, la date et l\'heure à chaque photo et vidéo capturée. Idéal pour le travail de terrain et la documentation.</string>
+    <string name="onboarding_2_title">Localisation en temps réel</string>
+    <string name="onboarding_2_body">Consultez vos coordonnées précises, l\'altitude et la précision en direct avant de capturer, pour que chaque enregistrement soit vérifiable.</string>
+    <string name="onboarding_3_title">Créez des rapports de terrain</string>
+    <string name="onboarding_3_body">Regroupez vos captures en rapports, ajoutez des notes et exportez des PDF partageables avec preuve GPS intégrée.</string>
+    <string name="onboarding_step_indicator">Étape %1$d sur %2$d</string>
+
+    <string name="nav_camera">Caméra</string>
+    <string name="nav_collection">Collection</string>
+    <string name="nav_reporting">Rapports</string>
+    <string name="nav_templates">Modèles</string>
+
+    <string name="camera_mode_photo">Photo</string>
+    <string name="camera_mode_video">Vidéo</string>
+    <string name="camera_shutter">Prendre une photo</string>
+    <string name="camera_record_start">Démarrer l\'enregistrement</string>
+    <string name="camera_record_stop">Arrêter l\'enregistrement</string>
+    <string name="camera_flash">Basculer le flash</string>
+    <string name="camera_switch_lens">Changer de caméra</string>
+    <string name="camera_open_gallery">Ouvrir la dernière capture</string>
+    <string name="camera_gps_acquiring">Acquisition de la localisation…</string>
+    <string name="camera_gps_precise">GPS fixé</string>
+    <string name="camera_gps_approximate">Localisation approximative</string>
+    <string name="camera_gps_unavailable">Localisation indisponible</string>
+    <string name="camera_altitude">Alt. : %1$s</string>
+    <string name="camera_permission_rationale">Caméra GPS : Horodatage et Carte a besoin de la caméra pour capturer des preuves de terrain.</string>
+    <string name="camera_permission_denied">L\'autorisation de la caméra est requise pour capturer. Activez-la dans les paramètres.</string>
+    <string name="location_permission_denied">Autorisation de localisation refusée. Appuyez pour l\'activer dans les paramètres afin d\'horodater le GPS.</string>
+    <string name="location_permission_rationale">La localisation est utilisée pendant que la caméra est active pour horodater les captures avec des coordonnées vérifiables. Caméra GPS ne vous suit jamais en arrière-plan.</string>
+    <string name="audio_permission_rationale">Le microphone est utilisé uniquement pour enregistrer l\'audio avec la vidéo. Vous pouvez enregistrer sans son à la place.</string>
+    <string name="audio_record_silent">Enregistrer sans audio</string>
+    <string name="camera_error_unavailable">La caméra est indisponible. Réessayez.</string>
+    <string name="capture_saved">Capture enregistrée</string>
+    <string name="capture_failed">Échec de la capture</string>
+
+    <string name="collection_title">Collection</string>
+    <string name="collection_search_hint">Rechercher par lieu, date…</string>
+    <string name="filter_all">Tout</string>
+    <string name="filter_today">Aujourd\'hui</string>
+    <string name="filter_this_week">Cette semaine</string>
+    <string name="filter_videos">Vidéos</string>
+    <string name="filter_photos">Photos</string>
+    <string name="collection_empty">Aucune capture pour l\'instant. Ouvrez la caméra pour ajouter la première.</string>
+    <string name="collection_group_today">Aujourd\'hui</string>
+    <string name="collection_group_yesterday">Hier</string>
+    <string name="media_status_processing">Traitement en cours…</string>
+    <string name="media_status_failed">Échec</string>
+    <string name="media_status_missing">Fichier manquant</string>
+    <string name="media_detail_title">Capture</string>
+    <string name="selection_count">%1$d sélectionné(s)</string>
+    <string name="delete_confirm_title">Supprimer la sélection ?</string>
+    <string name="delete_confirm_attached">Certains éléments sont associés à des rapports. La suppression les retirera de cet appareil ; les PDF exportés ne seront pas affectés.</string>
+    <string name="delete_confirm_single">Supprimer cet élément ? Cette action est irréversible.</string>
+
+    <string name="action_save_gallery">Enregistrer dans la galerie</string>
+    <string name="photo_saved_gallery">Photo enregistrée dans la galerie</string>
+    <string name="video_saved_gallery">Vidéo enregistrée dans la galerie</string>
+    <string name="already_in_gallery">Déjà disponible dans la galerie</string>
+    <string name="gallery_save_failed">Impossible d\'enregistrer dans la galerie</string>
+    <string name="video_load_error">Impossible de lire cette vidéo</string>
+    <string name="video_processing">Traitement de la vidéo…</string>
+    <string name="action_play">Lecture</string>
+    <string name="action_pause">Pause</string>
+
+    <string name="video_saved_success">Vidéo enregistrée avec succès</string>
+    <string name="video_record_failed">Échec de l\'enregistrement</string>
+    <string name="video_finalizing">Enregistrement de la vidéo…</string>
+
+    <string name="reporting_title">Rapports</string>
+    <string name="reporting_search_hint">Rechercher des rapports…</string>
+    <string name="reporting_recent">Rapports récents</string>
+    <string name="filter_all_reports">Tous les rapports</string>
+    <string name="filter_draft">Brouillon</string>
+    <string name="filter_exported">Exporté</string>
+    <string name="filter_shared">Partagé</string>
+    <string name="report_status_draft">BROUILLON</string>
+    <string name="report_status_exported">EXPORTÉ</string>
+    <string name="report_status_shared">PARTAGÉ</string>
+    <string name="reporting_empty">Aucun rapport pour l\'instant. Appuyez sur + pour en créer un.</string>
+    <string name="report_media_counts">%1$d photos · %2$d vidéos</string>
+
+    <string name="new_report_title">Nouveau rapport</string>
+    <string name="report_save_draft">Enregistrer le brouillon</string>
+    <string name="report_field_title">Titre du rapport</string>
+    <string name="report_field_title_hint">ex. Inspection du site Bloc 5</string>
+    <string name="report_field_location">Emplacement</string>
+    <string name="report_field_date">Date</string>
+    <string name="report_field_time">Heure</string>
+    <string name="report_field_notes">Notes / Description</string>
+    <string name="report_field_notes_hint">Ajoutez des notes de site, observations ou remarques…</string>
+    <string name="report_attached_photos">Photos jointes</string>
+    <string name="report_see_all">Tout voir (%1$d)</string>
+    <string name="report_gps_data">Données GPS</string>
+    <string name="report_gps_live">EN DIRECT</string>
+    <string name="report_latitude">Latitude</string>
+    <string name="report_longitude">Longitude</string>
+    <string name="report_altitude">Altitude</string>
+    <string name="report_accuracy">Précision</string>
+    <string name="report_submit">Soumettre le rapport</string>
+    <string name="report_submit_caption">Le rapport sera enregistré avec vérification GPS</string>
+    <string name="report_export_pdf">Exporter en PDF</string>
+    <string name="report_save_as">Enregistrer sous…</string>
+    <string name="report_export_in_progress">Exportation du PDF…</string>
+    <string name="report_export_failed">Échec de l\'exportation</string>
+    <string name="report_export_success">Rapport exporté</string>
+    <string name="report_discard_title">Abandonner les modifications ?</string>
+    <string name="report_location_unavailable">Localisation indisponible</string>
+    <string name="report_refresh_location">Actualiser la localisation</string>
+
+    <string name="templates_title">Modèles d\'horodatage</string>
+    <string name="templates_subtitle">Choisissez un style d\'horodatage</string>
+    <string name="template_minimal">Minimal</string>
+    <string name="template_minimal_desc">Date et heure seulement. Simple et épuré.</string>
+    <string name="template_classic">Classique</string>
+    <string name="template_classic_desc">Date, heure et coordonnées GPS.</string>
+    <string name="template_detailed">Détaillé</string>
+    <string name="template_detailed_desc">Date, heure, coordonnées, altitude et adresse complètes.</string>
+    <string name="template_reporter">Reporter</string>
+    <string name="template_reporter_desc">Modèle de marque pour rapports de terrain professionnels.</string>
+    <string name="template_selected">Sélectionné</string>
+
+    <string name="settings_title">Paramètres</string>
+    <string name="settings_preferences">PRÉFÉRENCES</string>
+    <string name="settings_language">Langue</string>
+    <string name="settings_share_app">Partager l\'application</string>
+    <string name="settings_privacy">Politique de confidentialité</string>
+    <string name="settings_terms">Conditions générales</string>
+    <string name="settings_version">Version %1$s</string>
+    <string name="share_app_text">Capturez des photos horodatées GPS et des rapports de terrain avec %1$s.</string>
+
+    <string name="legal_privacy_title">Politique de confidentialité</string>
+    <string name="legal_terms_title">Conditions générales</string>
+    <string name="legal_privacy_body">Caméra GPS : Horodatage et Carte traite vos photos, vidéos, localisation et contenu de rapports entièrement sur votre appareil par défaut. La localisation n\'est utilisée que lorsque l\'écran de la caméra est actif ou au moment de la capture pour horodater les captures avec des coordonnées ; l\'application n\'utilise pas la localisation en arrière-plan. Les médias capturés peuvent intégrer des horodatages visibles et des métadonnées EXIF GPS/heure. Les fichiers exportés ou partagés peuvent révéler la localisation aux destinataires et échappent au contrôle de l\'application une fois partagés. L\'application ne télécharge pas vos coordonnées, médias, notes ou identifiants dans cette version. Vous pouvez supprimer des médias et rapports depuis l\'application à tout moment ; les copies déjà partagées ou exportées ne seront pas affectées.</string>
+    <string name="legal_terms_body">Caméra GPS : Horodatage et Carte est fourni comme outil de documentation de terrain. Les coordonnées GPS et les horloges des appareils peuvent être manipulées sur les appareils grand public ; l\'application enregistre des preuves de localisation et d\'heure ainsi que des signaux de cohérence, mais ne fournit pas de preuve cryptographique de présence physique. Utilisez les enregistrements capturés en conséquence. Vous êtes responsable du respect des lois locales relatives à la photographie, à l\'enregistrement et à la confidentialité lors de l\'utilisation de cette application.</string>
+
+    <string name="coord_lat_north">%1$s° N</string>
+    <string name="coord_lat_south">%1$s° S</string>
+    <string name="coord_lon_east">%1$s° E</string>
+    <string name="coord_lon_west">%1$s° O</string>
+    <string name="value_meters">%1$s m</string>
+    <string name="value_accuracy">±%1$s m</string>
+    <string name="value_unavailable">—</string>
+    <string name="template_resolving_address">Résolution de l\'adresse…</string>
+
+    <plurals name="photos_count">
+        <item quantity="one">%1$d photo</item>
+        <item quantity="other">%1$d photos</item>
+    </plurals>
+    <plurals name="videos_count">
+        <item quantity="one">%1$d vidéo</item>
+        <item quantity="other">%1$d vidéos</item>
+    </plurals>
+</resources>

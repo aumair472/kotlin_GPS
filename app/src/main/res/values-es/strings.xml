@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Cámara GPS: Marca de Tiempo y Mapa</string>
+    <string name="app_tagline">Captura. Localiza. Reporta.</string>
+
+    <string name="action_continue">Continuar</string>
+    <string name="action_next">Siguiente</string>
+    <string name="action_skip">Omitir</string>
+    <string name="action_get_started">Comenzar</string>
+    <string name="action_back">Atrás</string>
+    <string name="action_close">Cerrar</string>
+    <string name="action_retry">Reintentar</string>
+    <string name="action_cancel">Cancelar</string>
+    <string name="action_delete">Eliminar</string>
+    <string name="action_share">Compartir</string>
+    <string name="action_save">Guardar</string>
+    <string name="action_settings">Ajustes</string>
+    <string name="action_open_settings">Abrir ajustes</string>
+    <string name="action_select_all">Seleccionar todo</string>
+
+    <string name="language_title">Seleccionar idioma</string>
+    <string name="language_heading">Elige tu idioma</string>
+    <string name="language_subtitle">Puedes cambiarlo más tarde en Ajustes</string>
+
+    <string name="onboarding_1_title">Marca cada foto con GPS</string>
+    <string name="onboarding_1_body">Añade automáticamente ubicación, fecha y hora a cada foto y video que captures. Perfecto para trabajo de campo y documentación.</string>
+    <string name="onboarding_2_title">Ubicación en tiempo real</string>
+    <string name="onboarding_2_body">Consulta tus coordenadas precisas, altitud y precisión en vivo antes de capturar, para que cada registro sea verificable.</string>
+    <string name="onboarding_3_title">Crea informes de campo</string>
+    <string name="onboarding_3_body">Agrupa capturas en informes, añade notas y exporta PDFs compartibles con evidencia GPS integrada.</string>
+    <string name="onboarding_step_indicator">Paso %1$d de %2$d</string>
+
+    <string name="nav_camera">Cámara</string>
+    <string name="nav_collection">Colección</string>
+    <string name="nav_reporting">Informes</string>
+    <string name="nav_templates">Plantillas</string>
+
+    <string name="camera_mode_photo">Foto</string>
+    <string name="camera_mode_video">Video</string>
+    <string name="camera_shutter">Capturar foto</string>
+    <string name="camera_record_start">Iniciar grabación</string>
+    <string name="camera_record_stop">Detener grabación</string>
+    <string name="camera_flash">Alternar flash</string>
+    <string name="camera_switch_lens">Cambiar cámara</string>
+    <string name="camera_open_gallery">Abrir última captura</string>
+    <string name="camera_gps_acquiring">Obteniendo ubicación…</string>
+    <string name="camera_gps_precise">GPS fijado</string>
+    <string name="camera_gps_approximate">Ubicación aproximada</string>
+    <string name="camera_gps_unavailable">Ubicación no disponible</string>
+    <string name="camera_altitude">Alt.: %1$s</string>
+    <string name="camera_permission_rationale">Cámara GPS: Marca de Tiempo y Mapa necesita la cámara para capturar evidencia de campo.</string>
+    <string name="camera_permission_denied">Se requiere permiso de cámara para capturar. Actívalo en ajustes.</string>
+    <string name="location_permission_denied">Permiso de ubicación denegado. Toca para activarlo en ajustes para el marcado GPS.</string>
+    <string name="location_permission_rationale">La ubicación se usa mientras la cámara está activa para marcar las capturas con coordenadas verificables. Cámara GPS nunca te rastrea en segundo plano.</string>
+    <string name="audio_permission_rationale">El micrófono se usa solo para grabar audio con el video. Puedes grabar sin sonido en su lugar.</string>
+    <string name="audio_record_silent">Grabar sin audio</string>
+    <string name="camera_error_unavailable">La cámara no está disponible. Inténtalo de nuevo.</string>
+    <string name="capture_saved">Captura guardada</string>
+    <string name="capture_failed">Error al capturar</string>
+
+    <string name="collection_title">Colección</string>
+    <string name="collection_search_hint">Buscar por ubicación, fecha…</string>
+    <string name="filter_all">Todo</string>
+    <string name="filter_today">Hoy</string>
+    <string name="filter_this_week">Esta semana</string>
+    <string name="filter_videos">Videos</string>
+    <string name="filter_photos">Fotos</string>
+    <string name="collection_empty">Aún no hay capturas. Abre la cámara para añadir la primera.</string>
+    <string name="collection_group_today">Hoy</string>
+    <string name="collection_group_yesterday">Ayer</string>
+    <string name="media_status_processing">Procesando…</string>
+    <string name="media_status_failed">Fallido</string>
+    <string name="media_status_missing">Archivo no encontrado</string>
+    <string name="media_detail_title">Captura</string>
+    <string name="selection_count">%1$d seleccionado(s)</string>
+    <string name="delete_confirm_title">¿Eliminar seleccionados?</string>
+    <string name="delete_confirm_attached">Algunos elementos están adjuntos a informes. Eliminarlos los quitará de este dispositivo; los PDF exportados no se verán afectados.</string>
+    <string name="delete_confirm_single">¿Eliminar este elemento? Esto no se puede deshacer.</string>
+
+    <string name="action_save_gallery">Guardar en la galería</string>
+    <string name="photo_saved_gallery">Foto guardada en la galería</string>
+    <string name="video_saved_gallery">Video guardado en la galería</string>
+    <string name="already_in_gallery">Ya disponible en la galería</string>
+    <string name="gallery_save_failed">No se pudo guardar en la galería</string>
+    <string name="video_load_error">No se pudo reproducir este video</string>
+    <string name="video_processing">Procesando video…</string>
+    <string name="action_play">Reproducir</string>
+    <string name="action_pause">Pausar</string>
+
+    <string name="video_saved_success">Video guardado con éxito</string>
+    <string name="video_record_failed">Error en la grabación</string>
+    <string name="video_finalizing">Guardando video…</string>
+
+    <string name="reporting_title">Informes</string>
+    <string name="reporting_search_hint">Buscar informes…</string>
+    <string name="reporting_recent">Informes recientes</string>
+    <string name="filter_all_reports">Todos los informes</string>
+    <string name="filter_draft">Borrador</string>
+    <string name="filter_exported">Exportado</string>
+    <string name="filter_shared">Compartido</string>
+    <string name="report_status_draft">BORRADOR</string>
+    <string name="report_status_exported">EXPORTADO</string>
+    <string name="report_status_shared">COMPARTIDO</string>
+    <string name="reporting_empty">Aún no hay informes. Toca + para empezar uno.</string>
+    <string name="report_media_counts">%1$d fotos · %2$d videos</string>
+
+    <string name="new_report_title">Nuevo informe</string>
+    <string name="report_save_draft">Guardar borrador</string>
+    <string name="report_field_title">Título del informe</string>
+    <string name="report_field_title_hint">ej. Inspección de sitio Bloque 5</string>
+    <string name="report_field_location">Ubicación</string>
+    <string name="report_field_date">Fecha</string>
+    <string name="report_field_time">Hora</string>
+    <string name="report_field_notes">Notas / Descripción</string>
+    <string name="report_field_notes_hint">Añade notas del sitio, observaciones o comentarios…</string>
+    <string name="report_attached_photos">Fotos adjuntas</string>
+    <string name="report_see_all">Ver todo (%1$d)</string>
+    <string name="report_gps_data">Datos GPS</string>
+    <string name="report_gps_live">EN VIVO</string>
+    <string name="report_latitude">Latitud</string>
+    <string name="report_longitude">Longitud</string>
+    <string name="report_altitude">Altitud</string>
+    <string name="report_accuracy">Precisión</string>
+    <string name="report_submit">Enviar informe</string>
+    <string name="report_submit_caption">El informe se guardará con verificación GPS</string>
+    <string name="report_export_pdf">Exportar PDF</string>
+    <string name="report_save_as">Guardar como…</string>
+    <string name="report_export_in_progress">Exportando PDF…</string>
+    <string name="report_export_failed">Error al exportar</string>
+    <string name="report_export_success">Informe exportado</string>
+    <string name="report_discard_title">¿Descartar cambios?</string>
+    <string name="report_location_unavailable">Ubicación no disponible</string>
+    <string name="report_refresh_location">Actualizar ubicación</string>
+
+    <string name="templates_title">Plantillas de marca de tiempo</string>
+    <string name="templates_subtitle">Elige un estilo de marca de tiempo</string>
+    <string name="template_minimal">Mínimo</string>
+    <string name="template_minimal_desc">Solo fecha y hora. Limpio y simple.</string>
+    <string name="template_classic">Clásico</string>
+    <string name="template_classic_desc">Fecha, hora y coordenadas GPS.</string>
+    <string name="template_detailed">Detallado</string>
+    <string name="template_detailed_desc">Fecha y hora completas, coordenadas, altitud y dirección.</string>
+    <string name="template_reporter">Reportero</string>
+    <string name="template_reporter_desc">Plantilla de marca para informes de campo profesionales.</string>
+    <string name="template_selected">Seleccionado</string>
+
+    <string name="settings_title">Ajustes</string>
+    <string name="settings_preferences">PREFERENCIAS</string>
+    <string name="settings_language">Idioma</string>
+    <string name="settings_share_app">Compartir app</string>
+    <string name="settings_privacy">Política de privacidad</string>
+    <string name="settings_terms">Términos y condiciones</string>
+    <string name="settings_version">Versión %1$s</string>
+    <string name="share_app_text">Captura fotos con marca GPS e informes de campo con %1$s.</string>
+
+    <string name="legal_privacy_title">Política de privacidad</string>
+    <string name="legal_terms_title">Términos y condiciones</string>
+    <string name="legal_privacy_body">Cámara GPS: Marca de Tiempo y Mapa procesa tus fotos, videos, ubicación y contenido de informes íntegramente en tu dispositivo de forma predeterminada. La ubicación solo se usa mientras la pantalla de la cámara está activa o en el momento de la captura para marcar capturas con coordenadas; la app no usa ubicación en segundo plano. Los medios capturados pueden incluir marcas visibles y metadatos EXIF de GPS/hora. Los archivos exportados o compartidos pueden revelar la ubicación a los destinatarios y quedan fuera del control de la app una vez compartidos. La app no sube tus coordenadas, medios, notas ni identificadores en esta versión. Puedes eliminar medios e informes desde la app en cualquier momento; las copias que ya hayas compartido o exportado no se verán afectadas.</string>
+    <string name="legal_terms_body">Cámara GPS: Marca de Tiempo y Mapa se ofrece como herramienta de documentación de campo. Las coordenadas GPS y los relojes de los dispositivos pueden manipularse en dispositivos de consumo; la app registra evidencia de ubicación y hora y señales de consistencia, pero no proporciona prueba criptográfica de presencia física. Usa los registros capturados en consecuencia. Eres responsable de cumplir con las leyes locales relativas a fotografía, grabación y privacidad al usar esta app.</string>
+
+    <string name="coord_lat_north">%1$s° N</string>
+    <string name="coord_lat_south">%1$s° S</string>
+    <string name="coord_lon_east">%1$s° E</string>
+    <string name="coord_lon_west">%1$s° O</string>
+    <string name="value_meters">%1$s m</string>
+    <string name="value_accuracy">±%1$s m</string>
+    <string name="value_unavailable">—</string>
+    <string name="template_resolving_address">Resolviendo dirección…</string>
+
+    <plurals name="photos_count">
+        <item quantity="one">%1$d foto</item>
+        <item quantity="other">%1$d fotos</item>
+    </plurals>
+    <plurals name="videos_count">
+        <item quantity="one">%1$d video</item>
+        <item quantity="other">%1$d videos</item>
+    </plurals>
+</resources>

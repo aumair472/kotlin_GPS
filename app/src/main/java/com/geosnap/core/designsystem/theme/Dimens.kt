@@ -10,7 +10,7 @@ object Spacing {
     val sm = 8.dp
     val md = 16.dp
     val lg = 24.dp
-    val xl = 40.dp
+    val xl = 24.dp
     val marginMobile = 16.dp
     val minTouchTarget = 44.dp
 }

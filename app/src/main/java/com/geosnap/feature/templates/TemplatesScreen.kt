@@ -57,7 +57,7 @@ fun TemplatesScreen(viewModel: TemplatesViewModel = hiltViewModel()) {
             )
             LazyColumn(
                 contentPadding = androidx.compose.foundation.layout.PaddingValues(Spacing.md),
-                verticalArrangement = Arrangement.spacedBy(Spacing.md),
+                verticalArrangement = Arrangement.spacedBy(Spacing.sm),
             ) {
                 items(viewModel.styles, key = { it.id }) { style ->
                     TemplateCard(style = style, selected = style == selected, onSelect = { viewModel.select(style) })
@@ -120,7 +120,7 @@ private fun TemplateCard(style: TemplateStyle, selected: Boolean, onSelect: () -
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(top = Spacing.sm)
+                .padding(top = Spacing.xs)
                 .clip(RoundedCornerShape(6.dp))
                 .background(GeoSnapPalette.OverlayScrim)
                 .padding(Spacing.sm),
@@ -133,7 +133,7 @@ private fun TemplateCard(style: TemplateStyle, selected: Boolean, onSelect: () -
             stringResource(descRes),
             style = MaterialTheme.typography.bodySmall,
             color = GeoSnapPalette.NeutralGray,
-            modifier = Modifier.padding(top = Spacing.sm),
+            modifier = Modifier.padding(top = Spacing.xs),
         )
     }
 }

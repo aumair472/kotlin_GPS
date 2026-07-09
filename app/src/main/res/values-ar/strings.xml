@@ -1,17 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="app_name">كاميرا GPS: الطابع الزمني والخريطة</string>
     <string name="app_tagline">التقط. حدد الموقع. أبلغ.</string>
 
     <string name="action_continue">متابعة</string>
     <string name="action_next">التالي</string>
     <string name="action_skip">تخطّي</string>
     <string name="action_get_started">ابدأ الآن</string>
+    <string name="action_back">رجوع</string>
     <string name="action_close">إغلاق</string>
     <string name="action_retry">إعادة المحاولة</string>
     <string name="action_cancel">إلغاء</string>
     <string name="action_delete">حذف</string>
     <string name="action_share">مشاركة</string>
+    <string name="action_save">حفظ</string>
     <string name="action_settings">الإعدادات</string>
+    <string name="action_open_settings">فتح الإعدادات</string>
+    <string name="action_select_all">تحديد الكل</string>
 
     <string name="language_title">اختر اللغة</string>
     <string name="language_heading">اختر لغتك</string>
@@ -30,6 +35,115 @@
     <string name="nav_reporting">التقارير</string>
     <string name="nav_templates">القوالب</string>
 
+    <string name="camera_mode_photo">صورة</string>
+    <string name="camera_mode_video">فيديو</string>
+    <string name="camera_shutter">التقاط صورة</string>
+    <string name="camera_record_start">بدء التسجيل</string>
+    <string name="camera_record_stop">إيقاف التسجيل</string>
+    <string name="camera_flash">تبديل الفلاش</string>
+    <string name="camera_switch_lens">تبديل الكاميرا</string>
+    <string name="camera_open_gallery">فتح آخر التقاط</string>
+    <string name="camera_gps_acquiring">جارٍ تحديد الموقع…</string>
+    <string name="camera_gps_precise">تم تحديد الموقع</string>
+    <string name="camera_gps_approximate">موقع تقريبي</string>
+    <string name="camera_gps_unavailable">الموقع غير متاح</string>
+    <string name="camera_altitude">الارتفاع: %1$s</string>
+    <string name="camera_permission_rationale">تحتاج كاميرا GPS: الطابع الزمني والخريطة إلى الكاميرا لالتقاط أدلة ميدانية.</string>
+    <string name="camera_permission_denied">إذن الكاميرا مطلوب للالتقاط. فعّله من الإعدادات.</string>
+    <string name="location_permission_denied">تم رفض إذن الموقع. اضغط لتفعيله من الإعدادات لطباعة GPS.</string>
+    <string name="location_permission_rationale">يُستخدم الموقع أثناء تفعيل الكاميرا لطباعة إحداثيات يمكن التحقق منها على اللقطات. لا تتعقبك كاميرا GPS في الخلفية أبدًا.</string>
+    <string name="audio_permission_rationale">يُستخدم الميكروفون فقط لتسجيل الصوت مع الفيديو. يمكنك التسجيل بدون صوت بدلاً من ذلك.</string>
+    <string name="audio_record_silent">التسجيل بدون صوت</string>
+    <string name="camera_error_unavailable">الكاميرا غير متاحة. حاول مرة أخرى.</string>
+    <string name="capture_saved">تم حفظ اللقطة</string>
+    <string name="capture_failed">فشل الالتقاط</string>
+
+    <string name="collection_title">المجموعة</string>
+    <string name="collection_search_hint">البحث حسب الموقع، التاريخ…</string>
+    <string name="filter_all">الكل</string>
+    <string name="filter_today">اليوم</string>
+    <string name="filter_this_week">هذا الأسبوع</string>
+    <string name="filter_videos">الفيديوهات</string>
+    <string name="filter_photos">الصور</string>
+    <string name="collection_empty">لا توجد لقطات بعد. افتح الكاميرا لإضافة أول لقطة.</string>
+    <string name="collection_group_today">اليوم</string>
+    <string name="collection_group_yesterday">أمس</string>
+    <string name="media_status_processing">جارٍ المعالجة…</string>
+    <string name="media_status_failed">فشل</string>
+    <string name="media_status_missing">الملف مفقود</string>
+    <string name="media_detail_title">اللقطة</string>
+    <string name="selection_count">%1$d محدد</string>
+    <string name="delete_confirm_title">حذف المحدد؟</string>
+    <string name="delete_confirm_attached">بعض العناصر مرفقة بتقارير. سيؤدي الحذف إلى إزالتها من هذا الجهاز؛ ملفات PDF المُصدّرة لن تتأثر.</string>
+    <string name="delete_confirm_single">حذف هذا العنصر؟ لا يمكن التراجع عن هذا.</string>
+
+    <string name="action_save_gallery">حفظ في المعرض</string>
+    <string name="photo_saved_gallery">تم حفظ الصورة في المعرض</string>
+    <string name="video_saved_gallery">تم حفظ الفيديو في المعرض</string>
+    <string name="already_in_gallery">متوفر بالفعل في المعرض</string>
+    <string name="gallery_save_failed">تعذّر الحفظ في المعرض</string>
+    <string name="video_load_error">تعذّر تشغيل هذا الفيديو</string>
+    <string name="video_processing">جارٍ معالجة الفيديو…</string>
+    <string name="action_play">تشغيل</string>
+    <string name="action_pause">إيقاف مؤقت</string>
+
+    <string name="video_saved_success">تم حفظ الفيديو بنجاح</string>
+    <string name="video_record_failed">فشل التسجيل</string>
+    <string name="video_finalizing">جارٍ حفظ الفيديو…</string>
+
+    <string name="reporting_title">التقارير</string>
+    <string name="reporting_search_hint">البحث في التقارير…</string>
+    <string name="reporting_recent">التقارير الأخيرة</string>
+    <string name="filter_all_reports">جميع التقارير</string>
+    <string name="filter_draft">مسودة</string>
+    <string name="filter_exported">مُصدَّر</string>
+    <string name="filter_shared">مُشارَك</string>
+    <string name="report_status_draft">مسودة</string>
+    <string name="report_status_exported">مُصدَّر</string>
+    <string name="report_status_shared">مُشارَك</string>
+    <string name="reporting_empty">لا توجد تقارير بعد. اضغط + لبدء واحد.</string>
+    <string name="report_media_counts">%1$d صور · %2$d فيديوهات</string>
+
+    <string name="new_report_title">تقرير جديد</string>
+    <string name="report_save_draft">حفظ كمسودة</string>
+    <string name="report_field_title">عنوان التقرير</string>
+    <string name="report_field_title_hint">مثال: تفتيش الموقع - القسم 5</string>
+    <string name="report_field_location">الموقع</string>
+    <string name="report_field_date">التاريخ</string>
+    <string name="report_field_time">الوقت</string>
+    <string name="report_field_notes">ملاحظات / وصف</string>
+    <string name="report_field_notes_hint">أضف ملاحظات الموقع، المشاهدات أو التعليقات…</string>
+    <string name="report_attached_photos">الصور المرفقة</string>
+    <string name="report_see_all">عرض الكل (%1$d)</string>
+    <string name="report_gps_data">بيانات GPS</string>
+    <string name="report_gps_live">مباشر</string>
+    <string name="report_latitude">خط العرض</string>
+    <string name="report_longitude">خط الطول</string>
+    <string name="report_altitude">الارتفاع</string>
+    <string name="report_accuracy">الدقة</string>
+    <string name="report_submit">إرسال التقرير</string>
+    <string name="report_submit_caption">سيتم حفظ التقرير مع التحقق من GPS</string>
+    <string name="report_export_pdf">تصدير PDF</string>
+    <string name="report_save_as">حفظ باسم…</string>
+    <string name="report_export_in_progress">جارٍ تصدير PDF…</string>
+    <string name="report_export_failed">فشل التصدير</string>
+    <string name="report_export_success">تم تصدير التقرير</string>
+    <string name="report_discard_title">تجاهل التغييرات؟</string>
+    <string name="report_location_unavailable">الموقع غير متاح</string>
+    <string name="report_refresh_location">تحديث الموقع</string>
+
+    <string name="templates_title">قوالب الطابع الزمني</string>
+    <string name="templates_subtitle">اختر نمط الطابع الزمني</string>
+    <string name="template_minimal">بسيط</string>
+    <string name="template_minimal_desc">التاريخ والوقت فقط. نظيف وبسيط.</string>
+    <string name="template_classic">كلاسيكي</string>
+    <string name="template_classic_desc">التاريخ والوقت وإحداثيات GPS.</string>
+    <string name="template_detailed">مفصّل</string>
+    <string name="template_detailed_desc">التاريخ والوقت الكاملان، الإحداثيات، الارتفاع والعنوان.</string>
+    <string name="template_reporter">المراسل</string>
+    <string name="template_reporter_desc">قالب بعلامة تجارية للتقارير الميدانية الاحترافية.</string>
+    <string name="template_selected">محدد</string>
+
     <string name="settings_title">الإعدادات</string>
     <string name="settings_preferences">التفضيلات</string>
     <string name="settings_language">اللغة</string>
@@ -37,8 +151,34 @@
     <string name="settings_privacy">سياسة الخصوصية</string>
     <string name="settings_terms">الشروط والأحكام</string>
     <string name="settings_version">الإصدار %1$s</string>
+    <string name="share_app_text">التقط صورًا موسومة بـ GPS وتقارير ميدانية باستخدام %1$s.</string>
 
-    <string name="camera_gps_acquiring">جارٍ تحديد الموقع…</string>
-    <string name="camera_gps_precise">تم تحديد الموقع</string>
-    <string name="camera_gps_unavailable">الموقع غير متاح</string>
+    <string name="legal_privacy_title">سياسة الخصوصية</string>
+    <string name="legal_terms_title">الشروط والأحكام</string>
+    <string name="legal_privacy_body">تعالج كاميرا GPS: الطابع الزمني والخريطة صورك وفيديوهاتك وموقعك ومحتوى تقاريرك بالكامل على جهازك افتراضيًا. يُستخدم الموقع فقط أثناء تفعيل شاشة الكاميرا أو عند الالتقاط لطباعة الإحداثيات؛ لا يستخدم التطبيق الموقع في الخلفية. قد يتضمن الوسائط الملتقطة طوابع مرئية وبيانات EXIF لـ GPS/الوقت. قد تكشف الملفات المُصدَّرة أو المشتركة الموقع للمستلمين وتكون خارج سيطرة التطبيق بمجرد مشاركتها. لا يقوم التطبيق برفع إحداثياتك أو وسائطك أو ملاحظاتك أو معرّفاتك في هذا الإصدار. يمكنك حذف الوسائط والتقارير من داخل التطبيق في أي وقت؛ النسخ التي شاركتها أو صدّرتها مسبقًا لن تتأثر.</string>
+    <string name="legal_terms_body">تُقدَّم كاميرا GPS: الطابع الزمني والخريطة كأداة توثيق ميداني. يمكن التلاعب بإحداثيات GPS وساعات الأجهزة على الأجهزة الاستهلاكية؛ يسجل التطبيق أدلة الموقع والوقت وإشارات الاتساق لكنه لا يوفر إثباتًا تشفيريًا للوجود الفعلي. استخدم السجلات الملتقطة وفقًا لذلك. أنت مسؤول عن الامتثال للقوانين المحلية المتعلقة بالتصوير والتسجيل والخصوصية عند استخدام هذا التطبيق.</string>
+
+    <string name="coord_lat_north">%1$s° شمالًا</string>
+    <string name="coord_lat_south">%1$s° جنوبًا</string>
+    <string name="coord_lon_east">%1$s° شرقًا</string>
+    <string name="coord_lon_west">%1$s° غربًا</string>
+    <string name="value_meters">%1$s م</string>
+    <string name="value_accuracy">±%1$s م</string>
+    <string name="value_unavailable">—</string>
+    <string name="template_resolving_address">جارٍ تحديد العنوان…</string>
+
+    <plurals name="photos_count">
+        <item quantity="one">صورة واحدة</item>
+        <item quantity="two">صورتان</item>
+        <item quantity="few">%1$d صور</item>
+        <item quantity="many">%1$d صورة</item>
+        <item quantity="other">%1$d صورة</item>
+    </plurals>
+    <plurals name="videos_count">
+        <item quantity="one">فيديو واحد</item>
+        <item quantity="two">فيديوهان</item>
+        <item quantity="few">%1$d فيديوهات</item>
+        <item quantity="many">%1$d فيديو</item>
+        <item quantity="other">%1$d فيديو</item>
+    </plurals>
 </resources>

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">जीपीएस कैमरा: टाइमस्टैंप और मैप</string>
+    <string name="app_tagline">कैप्चर करें। स्थान जानें। रिपोर्ट करें।</string>
+
+    <string name="action_continue">जारी रखें</string>
+    <string name="action_next">अगला</string>
+    <string name="action_skip">छोड़ें</string>
+    <string name="action_get_started">शुरू करें</string>
+    <string name="action_back">वापस</string>
+    <string name="action_close">बंद करें</string>
+    <string name="action_retry">पुनः प्रयास करें</string>
+    <string name="action_cancel">रद्द करें</string>
+    <string name="action_delete">हटाएं</string>
+    <string name="action_share">साझा करें</string>
+    <string name="action_save">सहेजें</string>
+    <string name="action_settings">सेटिंग्स</string>
+    <string name="action_open_settings">सेटिंग्स खोलें</string>
+    <string name="action_select_all">सभी चुनें</string>
+
+    <string name="language_title">भाषा चुनें</string>
+    <string name="language_heading">अपनी भाषा चुनें</string>
+    <string name="language_subtitle">आप इसे बाद में सेटिंग्स में बदल सकते हैं</string>
+
+    <string name="onboarding_1_title">हर फ़ोटो पर जीपीएस स्टैंप लगाएं</string>
+    <string name="onboarding_1_body">हर फ़ोटो और वीडियो में स्थान, तारीख़ और समय अपने आप जोड़ें। फ़ील्डवर्क और दस्तावेज़ीकरण के लिए बेहतरीन।</string>
+    <string name="onboarding_2_title">रीयल-टाइम स्थान</string>
+    <string name="onboarding_2_body">कैप्चर करने से पहले अपने सटीक निर्देशांक, ऊंचाई और सटीकता लाइव देखें।</string>
+    <string name="onboarding_3_title">फ़ील्ड रिपोर्ट बनाएं</string>
+    <string name="onboarding_3_body">कैप्चर को रिपोर्ट में समूहित करें, नोट्स जोड़ें और जीपीएस सबूत के साथ साझा करने योग्य पीडीएफ़ निर्यात करें।</string>
+    <string name="onboarding_step_indicator">चरण %1$d का %2$d</string>
+
+    <string name="nav_camera">कैमरा</string>
+    <string name="nav_collection">संग्रह</string>
+    <string name="nav_reporting">रिपोर्टिंग</string>
+    <string name="nav_templates">टेम्पलेट्स</string>
+
+    <string name="camera_mode_photo">फ़ोटो</string>
+    <string name="camera_mode_video">वीडियो</string>
+    <string name="camera_shutter">फ़ोटो कैप्चर करें</string>
+    <string name="camera_record_start">रिकॉर्डिंग शुरू करें</string>
+    <string name="camera_record_stop">रिकॉर्डिंग रोकें</string>
+    <string name="camera_flash">फ़्लैश बदलें</string>
+    <string name="camera_switch_lens">कैमरा बदलें</string>
+    <string name="camera_open_gallery">अंतिम कैप्चर खोलें</string>
+    <string name="camera_gps_acquiring">स्थान प्राप्त किया जा रहा है…</string>
+    <string name="camera_gps_precise">जीपीएस स्थिर</string>
+    <string name="camera_gps_approximate">अनुमानित स्थान</string>
+    <string name="camera_gps_unavailable">स्थान उपलब्ध नहीं है</string>
+    <string name="camera_altitude">ऊंचाई: %1$s</string>
+    <string name="camera_permission_rationale">जीपीएस कैमरा: टाइमस्टैंप और मैप को फ़ील्ड सबूत कैप्चर करने के लिए कैमरे की आवश्यकता है।</string>
+    <string name="camera_permission_denied">कैप्चर करने के लिए कैमरा अनुमति आवश्यक है। इसे सेटिंग्स में सक्षम करें।</string>
+    <string name="location_permission_denied">स्थान अनुमति अस्वीकृत। जीपीएस स्टैंपिंग के लिए इसे सेटिंग्स में सक्षम करने हेतु टैप करें।</string>
+    <string name="location_permission_rationale">कैमरा सक्रिय रहते समय स्थान का उपयोग कैप्चर पर सत्यापन योग्य निर्देशांक अंकित करने के लिए किया जाता है। जीपीएस कैमरा पृष्ठभूमि में आपको कभी ट्रैक नहीं करता।</string>
+    <string name="audio_permission_rationale">माइक्रोफ़ोन का उपयोग केवल वीडियो के साथ ऑडियो रिकॉर्ड करने के लिए किया जाता है। आप इसके बजाय बिना आवाज़ के रिकॉर्ड कर सकते हैं।</string>
+    <string name="audio_record_silent">बिना ऑडियो के रिकॉर्ड करें</string>
+    <string name="camera_error_unavailable">कैमरा उपलब्ध नहीं है। पुनः प्रयास करें।</string>
+    <string name="capture_saved">कैप्चर सहेजा गया</string>
+    <string name="capture_failed">कैप्चर विफल रहा</string>
+
+    <string name="collection_title">संग्रह</string>
+    <string name="collection_search_hint">स्थान, तारीख़ से खोजें…</string>
+    <string name="filter_all">सभी</string>
+    <string name="filter_today">आज</string>
+    <string name="filter_this_week">इस सप्ताह</string>
+    <string name="filter_videos">वीडियो</string>
+    <string name="filter_photos">फ़ोटो</string>
+    <string name="collection_empty">अभी तक कोई कैप्चर नहीं। अपना पहला कैप्चर जोड़ने के लिए कैमरा खोलें।</string>
+    <string name="collection_group_today">आज</string>
+    <string name="collection_group_yesterday">कल</string>
+    <string name="media_status_processing">प्रोसेस हो रहा है…</string>
+    <string name="media_status_failed">विफल</string>
+    <string name="media_status_missing">फ़ाइल गुम है</string>
+    <string name="media_detail_title">कैप्चर</string>
+    <string name="selection_count">%1$d चयनित</string>
+    <string name="delete_confirm_title">चयनित हटाएं?</string>
+    <string name="delete_confirm_attached">कुछ आइटम रिपोर्ट से जुड़े हैं। हटाने पर वे इस डिवाइस से हट जाएंगे; निर्यातित पीडीएफ़ प्रभावित नहीं होंगी।</string>
+    <string name="delete_confirm_single">इस आइटम को हटाएं? यह वापस नहीं लिया जा सकता।</string>
+
+    <string name="action_save_gallery">गैलरी में सहेजें</string>
+    <string name="photo_saved_gallery">फ़ोटो गैलरी में सहेजी गई</string>
+    <string name="video_saved_gallery">वीडियो गैलरी में सहेजा गया</string>
+    <string name="already_in_gallery">पहले से ही गैलरी में उपलब्ध है</string>
+    <string name="gallery_save_failed">गैलरी में सहेजा नहीं जा सका</string>
+    <string name="video_load_error">यह वीडियो नहीं चल सका</string>
+    <string name="video_processing">वीडियो प्रोसेस हो रहा है…</string>
+    <string name="action_play">चलाएं</string>
+    <string name="action_pause">रोकें</string>
+
+    <string name="video_saved_success">वीडियो सफलतापूर्वक सहेजा गया</string>
+    <string name="video_record_failed">रिकॉर्डिंग विफल रही</string>
+    <string name="video_finalizing">वीडियो सहेजा जा रहा है…</string>
+
+    <string name="reporting_title">रिपोर्टिंग</string>
+    <string name="reporting_search_hint">रिपोर्ट खोजें…</string>
+    <string name="reporting_recent">हाल की रिपोर्ट</string>
+    <string name="filter_all_reports">सभी रिपोर्ट</string>
+    <string name="filter_draft">ड्राफ़्ट</string>
+    <string name="filter_exported">निर्यातित</string>
+    <string name="filter_shared">साझा</string>
+    <string name="report_status_draft">ड्राफ़्ट</string>
+    <string name="report_status_exported">निर्यातित</string>
+    <string name="report_status_shared">साझा</string>
+    <string name="reporting_empty">अभी तक कोई रिपोर्ट नहीं। शुरू करने के लिए + पर टैप करें।</string>
+    <string name="report_media_counts">%1$d फ़ोटो · %2$d वीडियो</string>
+
+    <string name="new_report_title">नई रिपोर्ट</string>
+    <string name="report_save_draft">ड्राफ़्ट सहेजें</string>
+    <string name="report_field_title">रिपोर्ट शीर्षक</string>
+    <string name="report_field_title_hint">जैसे साइट निरीक्षण ब्लॉक 5</string>
+    <string name="report_field_location">स्थान</string>
+    <string name="report_field_date">तारीख़</string>
+    <string name="report_field_time">समय</string>
+    <string name="report_field_notes">नोट्स / विवरण</string>
+    <string name="report_field_notes_hint">साइट नोट्स, अवलोकन या टिप्पणियां जोड़ें…</string>
+    <string name="report_attached_photos">संलग्न फ़ोटो</string>
+    <string name="report_see_all">सभी देखें (%1$d)</string>
+    <string name="report_gps_data">जीपीएस डेटा</string>
+    <string name="report_gps_live">लाइव</string>
+    <string name="report_latitude">अक्षांश</string>
+    <string name="report_longitude">देशांतर</string>
+    <string name="report_altitude">ऊंचाई</string>
+    <string name="report_accuracy">सटीकता</string>
+    <string name="report_submit">रिपोर्ट सबमिट करें</string>
+    <string name="report_submit_caption">रिपोर्ट जीपीएस सत्यापन के साथ सहेजी जाएगी</string>
+    <string name="report_export_pdf">पीडीएफ़ निर्यात करें</string>
+    <string name="report_save_as">इस रूप में सहेजें…</string>
+    <string name="report_export_in_progress">पीडीएफ़ निर्यात हो रही है…</string>
+    <string name="report_export_failed">निर्यात विफल रहा</string>
+    <string name="report_export_success">रिपोर्ट निर्यात की गई</string>
+    <string name="report_discard_title">बदलाव छोड़ें?</string>
+    <string name="report_location_unavailable">स्थान उपलब्ध नहीं है</string>
+    <string name="report_refresh_location">स्थान ताज़ा करें</string>
+
+    <string name="templates_title">टाइमस्टैंप टेम्पलेट्स</string>
+    <string name="templates_subtitle">टाइमस्टैंप शैली चुनें</string>
+    <string name="template_minimal">सरल</string>
+    <string name="template_minimal_desc">केवल तारीख़ और समय। साफ़ और सरल।</string>
+    <string name="template_classic">क्लासिक</string>
+    <string name="template_classic_desc">तारीख़, समय और जीपीएस निर्देशांक।</string>
+    <string name="template_detailed">विस्तृत</string>
+    <string name="template_detailed_desc">पूरी तारीख़, समय, निर्देशांक, ऊंचाई और पता।</string>
+    <string name="template_reporter">रिपोर्टर</string>
+    <string name="template_reporter_desc">पेशेवर फ़ील्ड रिपोर्ट के लिए ब्रांडेड टेम्पलेट।</string>
+    <string name="template_selected">चयनित</string>
+
+    <string name="settings_title">सेटिंग्स</string>
+    <string name="settings_preferences">प्राथमिकताएं</string>
+    <string name="settings_language">भाषा</string>
+    <string name="settings_share_app">ऐप साझा करें</string>
+    <string name="settings_privacy">गोपनीयता नीति</string>
+    <string name="settings_terms">नियम और शर्तें</string>
+    <string name="settings_version">संस्करण %1$s</string>
+    <string name="share_app_text">%1$s के साथ जीपीएस-स्टैंप्ड फ़ोटो और फ़ील्ड रिपोर्ट कैप्चर करें।</string>
+
+    <string name="legal_privacy_title">गोपनीयता नीति</string>
+    <string name="legal_terms_title">नियम और शर्तें</string>
+    <string name="legal_privacy_body">जीपीएस कैमरा: टाइमस्टैंप और मैप डिफ़ॉल्ट रूप से आपकी फ़ोटो, वीडियो, स्थान और रिपोर्ट सामग्री को पूरी तरह से आपके डिवाइस पर प्रोसेस करता है। स्थान का उपयोग केवल कैमरा स्क्रीन सक्रिय रहने के दौरान या कैप्चर के समय निर्देशांक अंकित करने के लिए किया जाता है; यह पृष्ठभूमि में स्थान का उपयोग नहीं करता। कैप्चर की गई मीडिया में दृश्य स्टैंप और EXIF जीपीएस/समय मेटाडेटा शामिल हो सकता है। निर्यातित या साझा की गई फ़ाइलें प्राप्तकर्ताओं को स्थान प्रकट कर सकती हैं और साझा होने के बाद ऐप के नियंत्रण से बाहर होती हैं। यह ऐप इस रिलीज़ में आपके निर्देशांक, मीडिया, नोट्स या पहचानकर्ता अपलोड नहीं करता। आप किसी भी समय ऐप के भीतर से मीडिया और रिपोर्ट हटा सकते हैं; जिन प्रतियों को आप पहले ही साझा या निर्यात कर चुके हैं वे प्रभावित नहीं होंगी।</string>
+    <string name="legal_terms_body">जीपीएस कैमरा: टाइमस्टैंप और मैप एक फ़ील्ड दस्तावेज़ीकरण टूल के रूप में प्रदान किया गया है। उपभोक्ता डिवाइसों पर जीपीएस निर्देशांक और डिवाइस घड़ियों में हेरफेर किया जा सकता है; यह ऐप स्थान और समय के सबूत तथा संगति संकेत दर्ज करता है लेकिन भौतिक उपस्थिति का क्रिप्टोग्राफ़िक प्रमाण प्रदान नहीं करता। तदनुसार कैप्चर किए गए रिकॉर्ड का उपयोग करें। इस ऐप का उपयोग करते समय फ़ोटोग्राफ़ी, रिकॉर्डिंग और गोपनीयता से संबंधित स्थानीय कानूनों का पालन करना आपकी ज़िम्मेदारी है।</string>
+
+    <string name="coord_lat_north">%1$s° उत्तर</string>
+    <string name="coord_lat_south">%1$s° दक्षिण</string>
+    <string name="coord_lon_east">%1$s° पूर्व</string>
+    <string name="coord_lon_west">%1$s° पश्चिम</string>
+    <string name="value_meters">%1$s मी</string>
+    <string name="value_accuracy">±%1$s मी</string>
+    <string name="value_unavailable">—</string>
+    <string name="template_resolving_address">पता ज्ञात किया जा रहा है…</string>
+
+    <plurals name="photos_count">
+        <item quantity="one">%1$d फ़ोटो</item>
+        <item quantity="other">%1$d फ़ोटो</item>
+    </plurals>
+    <plurals name="videos_count">
+        <item quantity="one">%1$d वीडियो</item>
+        <item quantity="other">%1$d वीडियो</item>
+    </plurals>
+</resources>

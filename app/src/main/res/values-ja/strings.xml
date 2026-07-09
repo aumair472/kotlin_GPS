@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">GPSカメラ：タイムスタンプ＆マップ</string>
+    <string name="app_tagline">撮影する。位置を記録する。報告する。</string>
+
+    <string name="action_continue">続ける</string>
+    <string name="action_next">次へ</string>
+    <string name="action_skip">スキップ</string>
+    <string name="action_get_started">始める</string>
+    <string name="action_back">戻る</string>
+    <string name="action_close">閉じる</string>
+    <string name="action_retry">再試行</string>
+    <string name="action_cancel">キャンセル</string>
+    <string name="action_delete">削除</string>
+    <string name="action_share">共有</string>
+    <string name="action_save">保存</string>
+    <string name="action_settings">設定</string>
+    <string name="action_open_settings">設定を開く</string>
+    <string name="action_select_all">すべて選択</string>
+
+    <string name="language_title">言語を選択</string>
+    <string name="language_heading">言語を選んでください</string>
+    <string name="language_subtitle">後で設定画面から変更できます</string>
+
+    <string name="onboarding_1_title">すべての写真にGPSスタンプを</string>
+    <string name="onboarding_1_body">撮影するすべての写真と動画に、位置情報・日付・時刻を自動で追加します。現場作業や記録に最適です。</string>
+    <string name="onboarding_2_title">リアルタイムの位置情報</string>
+    <string name="onboarding_2_body">撮影前に正確な座標、高度、精度をライブで確認できるので、すべての記録が検証可能です。</string>
+    <string name="onboarding_3_title">現場レポートを作成</string>
+    <string name="onboarding_3_body">撮影データをレポートにまとめ、メモを追加し、GPS証拠を埋め込んだ共有可能なPDFを書き出せます。</string>
+    <string name="onboarding_step_indicator">ステップ %1$d / %2$d</string>
+
+    <string name="nav_camera">カメラ</string>
+    <string name="nav_collection">コレクション</string>
+    <string name="nav_reporting">レポート</string>
+    <string name="nav_templates">テンプレート</string>
+
+    <string name="camera_mode_photo">写真</string>
+    <string name="camera_mode_video">動画</string>
+    <string name="camera_shutter">写真を撮影</string>
+    <string name="camera_record_start">録画を開始</string>
+    <string name="camera_record_stop">録画を停止</string>
+    <string name="camera_flash">フラッシュ切替</string>
+    <string name="camera_switch_lens">カメラ切替</string>
+    <string name="camera_open_gallery">最後の撮影を開く</string>
+    <string name="camera_gps_acquiring">位置情報を取得中…</string>
+    <string name="camera_gps_precise">GPS固定</string>
+    <string name="camera_gps_approximate">おおよその位置</string>
+    <string name="camera_gps_unavailable">位置情報が利用できません</string>
+    <string name="camera_altitude">高度: %1$s</string>
+    <string name="camera_permission_rationale">GPSカメラ：タイムスタンプ＆マップは現場の証拠を撮影するためにカメラを必要とします。</string>
+    <string name="camera_permission_denied">撮影にはカメラの許可が必要です。設定で有効にしてください。</string>
+    <string name="location_permission_denied">位置情報の許可が拒否されました。GPSスタンプのため設定で有効にするにはタップしてください。</string>
+    <string name="location_permission_rationale">カメラが起動している間、位置情報は検証可能な座標を撮影データに記録するために使用されます。GPSカメラがバックグラウンドで追跡することはありません。</string>
+    <string name="audio_permission_rationale">マイクは動画と一緒に音声を録音する場合にのみ使用されます。代わりに無音で録画することもできます。</string>
+    <string name="audio_record_silent">音声なしで録画</string>
+    <string name="camera_error_unavailable">カメラが利用できません。もう一度お試しください。</string>
+    <string name="capture_saved">撮影データを保存しました</string>
+    <string name="capture_failed">撮影に失敗しました</string>
+
+    <string name="collection_title">コレクション</string>
+    <string name="collection_search_hint">場所や日付で検索…</string>
+    <string name="filter_all">すべて</string>
+    <string name="filter_today">今日</string>
+    <string name="filter_this_week">今週</string>
+    <string name="filter_videos">動画</string>
+    <string name="filter_photos">写真</string>
+    <string name="collection_empty">まだ撮影データがありません。カメラを開いて最初の1枚を追加しましょう。</string>
+    <string name="collection_group_today">今日</string>
+    <string name="collection_group_yesterday">昨日</string>
+    <string name="media_status_processing">処理中…</string>
+    <string name="media_status_failed">失敗</string>
+    <string name="media_status_missing">ファイルが見つかりません</string>
+    <string name="media_detail_title">撮影データ</string>
+    <string name="selection_count">%1$d件選択中</string>
+    <string name="delete_confirm_title">選択した項目を削除しますか？</string>
+    <string name="delete_confirm_attached">一部の項目はレポートに添付されています。削除するとこの端末から削除されますが、書き出し済みのPDFには影響しません。</string>
+    <string name="delete_confirm_single">この項目を削除しますか？元に戻すことはできません。</string>
+
+    <string name="action_save_gallery">ギャラリーに保存</string>
+    <string name="photo_saved_gallery">写真をギャラリーに保存しました</string>
+    <string name="video_saved_gallery">動画をギャラリーに保存しました</string>
+    <string name="already_in_gallery">すでにギャラリーに存在します</string>
+    <string name="gallery_save_failed">ギャラリーに保存できませんでした</string>
+    <string name="video_load_error">この動画を再生できませんでした</string>
+    <string name="video_processing">動画を処理中…</string>
+    <string name="action_play">再生</string>
+    <string name="action_pause">一時停止</string>
+
+    <string name="video_saved_success">動画を保存しました</string>
+    <string name="video_record_failed">録画に失敗しました</string>
+    <string name="video_finalizing">動画を保存中…</string>
+
+    <string name="reporting_title">レポート</string>
+    <string name="reporting_search_hint">レポートを検索…</string>
+    <string name="reporting_recent">最近のレポート</string>
+    <string name="filter_all_reports">すべてのレポート</string>
+    <string name="filter_draft">下書き</string>
+    <string name="filter_exported">書き出し済み</string>
+    <string name="filter_shared">共有済み</string>
+    <string name="report_status_draft">下書き</string>
+    <string name="report_status_exported">書き出し済み</string>
+    <string name="report_status_shared">共有済み</string>
+    <string name="reporting_empty">まだレポートがありません。＋をタップして作成しましょう。</string>
+    <string name="report_media_counts">写真%1$d枚 · 動画%2$d本</string>
+
+    <string name="new_report_title">新しいレポート</string>
+    <string name="report_save_draft">下書きを保存</string>
+    <string name="report_field_title">レポートのタイトル</string>
+    <string name="report_field_title_hint">例：現場検査 ブロック5</string>
+    <string name="report_field_location">場所</string>
+    <string name="report_field_date">日付</string>
+    <string name="report_field_time">時刻</string>
+    <string name="report_field_notes">メモ / 説明</string>
+    <string name="report_field_notes_hint">現場のメモ、観察内容、所見などを追加…</string>
+    <string name="report_attached_photos">添付された写真</string>
+    <string name="report_see_all">すべて表示 (%1$d)</string>
+    <string name="report_gps_data">GPSデータ</string>
+    <string name="report_gps_live">ライブ</string>
+    <string name="report_latitude">緯度</string>
+    <string name="report_longitude">経度</string>
+    <string name="report_altitude">高度</string>
+    <string name="report_accuracy">精度</string>
+    <string name="report_submit">レポートを送信</string>
+    <string name="report_submit_caption">GPS検証付きでレポートが保存されます</string>
+    <string name="report_export_pdf">PDFを書き出す</string>
+    <string name="report_save_as">名前を付けて保存…</string>
+    <string name="report_export_in_progress">PDFを書き出し中…</string>
+    <string name="report_export_failed">書き出しに失敗しました</string>
+    <string name="report_export_success">レポートを書き出しました</string>
+    <string name="report_discard_title">変更を破棄しますか？</string>
+    <string name="report_location_unavailable">位置情報が利用できません</string>
+    <string name="report_refresh_location">位置情報を更新</string>
+
+    <string name="templates_title">タイムスタンプテンプレート</string>
+    <string name="templates_subtitle">タイムスタンプのスタイルを選択</string>
+    <string name="template_minimal">ミニマル</string>
+    <string name="template_minimal_desc">日付と時刻のみ。シンプルで見やすい。</string>
+    <string name="template_classic">クラシック</string>
+    <string name="template_classic_desc">日付、時刻、GPS座標。</string>
+    <string name="template_detailed">詳細</string>
+    <string name="template_detailed_desc">日付・時刻・座標・高度・住所をすべて表示。</string>
+    <string name="template_reporter">レポーター</string>
+    <string name="template_reporter_desc">プロフェッショナルな現場レポート向けのブランド付きテンプレート。</string>
+    <string name="template_selected">選択中</string>
+
+    <string name="settings_title">設定</string>
+    <string name="settings_preferences">設定項目</string>
+    <string name="settings_language">言語</string>
+    <string name="settings_share_app">アプリを共有</string>
+    <string name="settings_privacy">プライバシーポリシー</string>
+    <string name="settings_terms">利用規約</string>
+    <string name="settings_version">バージョン %1$s</string>
+    <string name="share_app_text">%1$sでGPSスタンプ付きの写真と現場レポートを撮影しましょう。</string>
+
+    <string name="legal_privacy_title">プライバシーポリシー</string>
+    <string name="legal_terms_title">利用規約</string>
+    <string name="legal_privacy_body">GPSカメラ：タイムスタンプ＆マップは、デフォルトで写真、動画、位置情報、レポート内容をすべて端末内で処理します。位置情報は、カメラ画面が有効な間、または撮影時に座標を記録するためにのみ使用され、バックグラウンドでの位置情報利用は行いません。撮影されたメディアには、目に見えるスタンプやEXIFのGPS/時刻メタデータが含まれる場合があります。書き出しまたは共有されたファイルは、共有後にアプリの管理外となり、受信者に位置情報が伝わる可能性があります。本バージョンでは、座標、メディア、メモ、識別子をアップロードすることはありません。メディアやレポートはいつでもアプリ内から削除できますが、すでに共有・書き出し済みのコピーには影響しません。</string>
+    <string name="legal_terms_body">GPSカメラ：タイムスタンプ＆マップは現場記録ツールとして提供されています。一般的な端末ではGPS座標や内部時計が改ざんされる可能性があるため、本アプリは位置情報・時刻の証拠および整合性の指標を記録しますが、物理的な存在の暗号学的証明を提供するものではありません。撮影された記録はその点を踏まえてご利用ください。本アプリの使用にあたっては、撮影・録画・プライバシーに関する現地の法令を遵守する責任は利用者にあります。</string>
+
+    <string name="coord_lat_north">北緯 %1$s°</string>
+    <string name="coord_lat_south">南緯 %1$s°</string>
+    <string name="coord_lon_east">東経 %1$s°</string>
+    <string name="coord_lon_west">西経 %1$s°</string>
+    <string name="value_meters">%1$s m</string>
+    <string name="value_accuracy">±%1$s m</string>
+    <string name="value_unavailable">—</string>
+    <string name="template_resolving_address">住所を取得中…</string>
+
+    <plurals name="photos_count">
+        <item quantity="other">写真 %1$d枚</item>
+    </plurals>
+    <plurals name="videos_count">
+        <item quantity="other">動画 %1$d本</item>
+    </plurals>
+</resources>

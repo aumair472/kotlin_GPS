@@ -1,17 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="app_name">جی پی ایس کیمرہ: ٹائم اسٹیمپ اور نقشہ</string>
     <string name="app_tagline">کیپچر کریں۔ مقام جانیں۔ رپورٹ کریں۔</string>
 
     <string name="action_continue">جاری رکھیں</string>
     <string name="action_next">اگلا</string>
     <string name="action_skip">چھوڑیں</string>
     <string name="action_get_started">شروع کریں</string>
+    <string name="action_back">واپس</string>
     <string name="action_close">بند کریں</string>
     <string name="action_retry">دوبارہ کوشش کریں</string>
     <string name="action_cancel">منسوخ کریں</string>
     <string name="action_delete">حذف کریں</string>
     <string name="action_share">شیئر کریں</string>
+    <string name="action_save">محفوظ کریں</string>
     <string name="action_settings">ترتیبات</string>
+    <string name="action_open_settings">ترتیبات کھولیں</string>
+    <string name="action_select_all">سب منتخب کریں</string>
 
     <string name="language_title">زبان منتخب کریں</string>
     <string name="language_heading">اپنی زبان منتخب کریں</string>
@@ -30,6 +35,115 @@
     <string name="nav_reporting">رپورٹنگ</string>
     <string name="nav_templates">ٹیمپلیٹس</string>
 
+    <string name="camera_mode_photo">تصویر</string>
+    <string name="camera_mode_video">ویڈیو</string>
+    <string name="camera_shutter">تصویر لیں</string>
+    <string name="camera_record_start">ریکارڈنگ شروع کریں</string>
+    <string name="camera_record_stop">ریکارڈنگ روکیں</string>
+    <string name="camera_flash">فلیش تبدیل کریں</string>
+    <string name="camera_switch_lens">کیمرہ تبدیل کریں</string>
+    <string name="camera_open_gallery">آخری کیپچر کھولیں</string>
+    <string name="camera_gps_acquiring">مقام حاصل کیا جا رہا ہے…</string>
+    <string name="camera_gps_precise">GPS طے شدہ</string>
+    <string name="camera_gps_approximate">تخمینی مقام</string>
+    <string name="camera_gps_unavailable">مقام دستیاب نہیں</string>
+    <string name="camera_altitude">بلندی: %1$s</string>
+    <string name="camera_permission_rationale">جی پی ایس کیمرہ: ٹائم اسٹیمپ اور نقشہ کو فیلڈ ثبوت کیپچر کرنے کے لیے کیمرے کی ضرورت ہے۔</string>
+    <string name="camera_permission_denied">کیپچر کرنے کے لیے کیمرے کی اجازت درکار ہے۔ اسے ترتیبات میں فعال کریں۔</string>
+    <string name="location_permission_denied">مقام کی اجازت مسترد کر دی گئی۔ GPS نشان کے لیے اسے ترتیبات میں فعال کریں۔</string>
+    <string name="location_permission_rationale">کیمرہ فعال ہونے کے دوران مقام کا استعمال کیپچرز پر قابلِ تصدیق نقاط لگانے کے لیے ہوتا ہے۔ جی پی ایس کیمرہ پس منظر میں کبھی آپ کو ٹریک نہیں کرتا۔</string>
+    <string name="audio_permission_rationale">مائیکروفون صرف ویڈیو کے ساتھ آڈیو ریکارڈ کرنے کے لیے استعمال ہوتا ہے۔ آپ اس کے بجائے خاموشی سے ریکارڈ کر سکتے ہیں۔</string>
+    <string name="audio_record_silent">آڈیو کے بغیر ریکارڈ کریں</string>
+    <string name="camera_error_unavailable">کیمرہ دستیاب نہیں ہے۔ دوبارہ کوشش کریں۔</string>
+    <string name="capture_saved">کیپچر محفوظ ہو گیا</string>
+    <string name="capture_failed">کیپچر ناکام ہو گیا</string>
+
+    <string name="collection_title">مجموعہ</string>
+    <string name="collection_search_hint">مقام، تاریخ سے تلاش کریں…</string>
+    <string name="filter_all">سب</string>
+    <string name="filter_today">آج</string>
+    <string name="filter_this_week">اس ہفتے</string>
+    <string name="filter_videos">ویڈیوز</string>
+    <string name="filter_photos">تصاویر</string>
+    <string name="collection_empty">ابھی تک کوئی کیپچر نہیں۔ اپنا پہلا کیپچر شامل کرنے کے لیے کیمرہ کھولیں۔</string>
+    <string name="collection_group_today">آج</string>
+    <string name="collection_group_yesterday">کل</string>
+    <string name="media_status_processing">پروسیس ہو رہا ہے…</string>
+    <string name="media_status_failed">ناکام</string>
+    <string name="media_status_missing">فائل غائب ہے</string>
+    <string name="media_detail_title">کیپچر</string>
+    <string name="selection_count">%1$d منتخب</string>
+    <string name="delete_confirm_title">منتخب کردہ حذف کریں؟</string>
+    <string name="delete_confirm_attached">کچھ اشیاء رپورٹس کے ساتھ منسلک ہیں۔ حذف کرنے سے یہ اس ڈیوائس سے ہٹ جائیں گی؛ برآمد شدہ PDFs متاثر نہیں ہوں گی۔</string>
+    <string name="delete_confirm_single">اس آئٹم کو حذف کریں؟ یہ واپس نہیں لیا جا سکتا۔</string>
+
+    <string name="action_save_gallery">گیلری میں محفوظ کریں</string>
+    <string name="photo_saved_gallery">تصویر گیلری میں محفوظ ہو گئی</string>
+    <string name="video_saved_gallery">ویڈیو گیلری میں محفوظ ہو گئی</string>
+    <string name="already_in_gallery">پہلے سے ہی گیلری میں دستیاب ہے</string>
+    <string name="gallery_save_failed">گیلری میں محفوظ نہیں ہو سکا</string>
+    <string name="video_load_error">یہ ویڈیو نہیں چل سکی</string>
+    <string name="video_processing">ویڈیو پروسیس ہو رہی ہے…</string>
+    <string name="action_play">چلائیں</string>
+    <string name="action_pause">روکیں</string>
+
+    <string name="video_saved_success">ویڈیو کامیابی سے محفوظ ہو گئی</string>
+    <string name="video_record_failed">ریکارڈنگ ناکام ہو گئی</string>
+    <string name="video_finalizing">ویڈیو محفوظ ہو رہی ہے…</string>
+
+    <string name="reporting_title">رپورٹنگ</string>
+    <string name="reporting_search_hint">رپورٹس تلاش کریں…</string>
+    <string name="reporting_recent">حالیہ رپورٹس</string>
+    <string name="filter_all_reports">تمام رپورٹس</string>
+    <string name="filter_draft">مسودہ</string>
+    <string name="filter_exported">برآمد شدہ</string>
+    <string name="filter_shared">شیئر شدہ</string>
+    <string name="report_status_draft">مسودہ</string>
+    <string name="report_status_exported">برآمد شدہ</string>
+    <string name="report_status_shared">شیئر شدہ</string>
+    <string name="reporting_empty">ابھی تک کوئی رپورٹ نہیں۔ شروع کرنے کے لیے + پر تھپتھپائیں۔</string>
+    <string name="report_media_counts">%1$d تصاویر · %2$d ویڈیوز</string>
+
+    <string name="new_report_title">نئی رپورٹ</string>
+    <string name="report_save_draft">مسودہ محفوظ کریں</string>
+    <string name="report_field_title">رپورٹ کا عنوان</string>
+    <string name="report_field_title_hint">مثلاً سائٹ معائنہ بلاک 5</string>
+    <string name="report_field_location">مقام</string>
+    <string name="report_field_date">تاریخ</string>
+    <string name="report_field_time">وقت</string>
+    <string name="report_field_notes">نوٹس / تفصیل</string>
+    <string name="report_field_notes_hint">سائٹ نوٹس، مشاہدات یا تبصرے شامل کریں…</string>
+    <string name="report_attached_photos">منسلک تصاویر</string>
+    <string name="report_see_all">سب دیکھیں (%1$d)</string>
+    <string name="report_gps_data">GPS ڈیٹا</string>
+    <string name="report_gps_live">لائیو</string>
+    <string name="report_latitude">عرض بلد</string>
+    <string name="report_longitude">طول بلد</string>
+    <string name="report_altitude">بلندی</string>
+    <string name="report_accuracy">درستگی</string>
+    <string name="report_submit">رپورٹ جمع کروائیں</string>
+    <string name="report_submit_caption">رپورٹ GPS تصدیق کے ساتھ محفوظ کی جائے گی</string>
+    <string name="report_export_pdf">PDF برآمد کریں</string>
+    <string name="report_save_as">محفوظ کریں بطور…</string>
+    <string name="report_export_in_progress">PDF برآمد ہو رہی ہے…</string>
+    <string name="report_export_failed">برآمد ناکام ہو گئی</string>
+    <string name="report_export_success">رپورٹ برآمد ہو گئی</string>
+    <string name="report_discard_title">تبدیلیاں مسترد کریں؟</string>
+    <string name="report_location_unavailable">مقام دستیاب نہیں</string>
+    <string name="report_refresh_location">مقام تازہ کریں</string>
+
+    <string name="templates_title">ٹائم اسٹیمپ ٹیمپلیٹس</string>
+    <string name="templates_subtitle">ٹائم اسٹیمپ کا انداز منتخب کریں</string>
+    <string name="template_minimal">مختصر</string>
+    <string name="template_minimal_desc">صرف تاریخ اور وقت۔ صاف اور سادہ۔</string>
+    <string name="template_classic">کلاسک</string>
+    <string name="template_classic_desc">تاریخ، وقت اور GPS نقاط۔</string>
+    <string name="template_detailed">تفصیلی</string>
+    <string name="template_detailed_desc">مکمل تاریخ، وقت، نقاط، بلندی اور پتہ۔</string>
+    <string name="template_reporter">رپورٹر</string>
+    <string name="template_reporter_desc">پیشہ ورانہ فیلڈ رپورٹس کے لیے برانڈڈ ٹیمپلیٹ۔</string>
+    <string name="template_selected">منتخب شدہ</string>
+
     <string name="settings_title">ترتیبات</string>
     <string name="settings_preferences">ترجیحات</string>
     <string name="settings_language">زبان</string>
@@ -37,8 +151,28 @@
     <string name="settings_privacy">رازداری کی پالیسی</string>
     <string name="settings_terms">شرائط و ضوابط</string>
     <string name="settings_version">ورژن %1$s</string>
+    <string name="share_app_text">%1$s کے ساتھ GPS نشان زدہ تصاویر اور فیلڈ رپورٹس کیپچر کریں۔</string>
 
-    <string name="camera_gps_acquiring">مقام حاصل کیا جا رہا ہے…</string>
-    <string name="camera_gps_precise">GPS طے شدہ</string>
-    <string name="camera_gps_unavailable">مقام دستیاب نہیں</string>
+    <string name="legal_privacy_title">رازداری کی پالیسی</string>
+    <string name="legal_terms_title">شرائط و ضوابط</string>
+    <string name="legal_privacy_body">جی پی ایس کیمرہ: ٹائم اسٹیمپ اور نقشہ آپ کی تصاویر، ویڈیوز، مقام اور رپورٹ کا مواد بذریعہ ڈیفالٹ مکمل طور پر آپ کی ڈیوائس پر پروسیس کرتا ہے۔ مقام صرف اس وقت استعمال ہوتا ہے جب کیمرہ اسکرین فعال ہو یا کیپچر کے وقت نقاط لگانے کے لیے؛ یہ پس منظر میں مقام استعمال نہیں کرتا۔ کیپچر شدہ میڈیا میں نظر آنے والے نشانات اور EXIF GPS/وقت میٹا ڈیٹا شامل ہو سکتا ہے۔ برآمد یا شیئر شدہ فائلیں وصول کنندگان کو مقام ظاہر کر سکتی ہیں اور شیئر ہونے کے بعد ایپ کے کنٹرول سے باہر ہوتی ہیں۔ یہ ایپ اس ریلیز میں آپ کے نقاط، میڈیا، نوٹس یا شناخت کنندگان اپ لوڈ نہیں کرتی۔ آپ کسی بھی وقت ایپ کے اندر سے میڈیا اور رپورٹس حذف کر سکتے ہیں؛ جو کاپیاں آپ پہلے ہی شیئر یا برآمد کر چکے ہیں وہ متاثر نہیں ہوں گی۔</string>
+    <string name="legal_terms_body">جی پی ایس کیمرہ: ٹائم اسٹیمپ اور نقشہ ایک فیلڈ دستاویزی ٹول کے طور پر فراہم کیا جاتا ہے۔ صارف کی ڈیوائسز پر GPS نقاط اور گھڑی میں ردوبدل ممکن ہے؛ یہ ایپ مقام اور وقت کا ثبوت اور مطابقت کے اشارے ریکارڈ کرتی ہے لیکن جسمانی موجودگی کا خفیہ نگاری ثبوت فراہم نہیں کرتی۔ اسی مطابق کیپچر شدہ ریکارڈز استعمال کریں۔ اس ایپ کو استعمال کرتے وقت تصویر کشی، ریکارڈنگ اور رازداری سے متعلق مقامی قوانین کی تعمیل کرنا آپ کی ذمہ داری ہے۔</string>
+
+    <string name="coord_lat_north">%1$s° شمال</string>
+    <string name="coord_lat_south">%1$s° جنوب</string>
+    <string name="coord_lon_east">%1$s° مشرق</string>
+    <string name="coord_lon_west">%1$s° مغرب</string>
+    <string name="value_meters">%1$s میٹر</string>
+    <string name="value_accuracy">±%1$s میٹر</string>
+    <string name="value_unavailable">—</string>
+    <string name="template_resolving_address">پتہ معلوم کیا جا رہا ہے…</string>
+
+    <plurals name="photos_count">
+        <item quantity="one">%1$d تصویر</item>
+        <item quantity="other">%1$d تصاویر</item>
+    </plurals>
+    <plurals name="videos_count">
+        <item quantity="one">%1$d ویڈیو</item>
+        <item quantity="other">%1$d ویڈیوز</item>
+    </plurals>
 </resources>

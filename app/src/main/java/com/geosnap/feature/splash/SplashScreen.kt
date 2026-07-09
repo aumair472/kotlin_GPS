@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -67,9 +68,10 @@ fun SplashScreen(
             )
             Text(
                 text = stringResource(R.string.app_name),
-                style = MaterialTheme.typography.displaySmall,
+                style = MaterialTheme.typography.headlineLarge,
                 color = GeoSnapPalette.PrimaryContainer,
-                modifier = Modifier.padding(top = Spacing.md),
+                textAlign = TextAlign.Center,
+                modifier = Modifier.fillMaxWidth(0.85f).padding(top = Spacing.md),
             )
             Text(
                 text = stringResource(R.string.app_tagline),

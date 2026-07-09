@@ -55,6 +55,7 @@
     <string name="camera_altitude">Alt: %1$s</string>
     <string name="camera_permission_rationale">GPS Camera: Timestamp &amp; Map needs the camera to capture field evidence.</string>
     <string name="camera_permission_denied">Camera permission is required to capture. Enable it in settings.</string>
+    <string name="location_permission_denied">Location permission denied. Tap to enable it in Settings for GPS stamping.</string>
     <string name="location_permission_rationale">Location is used while the camera is active to stamp captures with verifiable coordinates. GPS Camera: Timestamp &amp; Map never tracks you in the background.</string>
     <string name="audio_permission_rationale">Microphone is used only to record audio with video. You can record silently instead.</string>
     <string name="audio_record_silent">Record without audio</string>

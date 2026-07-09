@@ -1,6 +1,9 @@
 package com.geosnap.feature.camera
 
 import android.Manifest
+import android.content.Intent
+import android.net.Uri
+import android.provider.Settings
 import androidx.camera.view.PreviewView
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -36,7 +39,10 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableFloatStateOf
+import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -74,11 +80,22 @@ fun CameraScreen(
     viewModel: CameraViewModel = hiltViewModel(),
 ) {
     val state by viewModel.state.collectAsStateWithLifecycle()
-    val cameraPermission = rememberPermissionState(Manifest.permission.CAMERA)
-    val locationPermission = rememberMultiplePermissionsState(
-        listOf(Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION),
+    val corePermissions = rememberMultiplePermissionsState(
+        listOf(
+            Manifest.permission.CAMERA,
+            Manifest.permission.ACCESS_FINE_LOCATION,
+            Manifest.permission.ACCESS_COARSE_LOCATION,
+        ),
     )
     val audioPermission = rememberPermissionState(Manifest.permission.RECORD_AUDIO)
+    val cameraGranted = corePermissions.permissions.any {
+        it.permission == Manifest.permission.CAMERA && it.status.isGranted
+    }
+    val locationGranted = corePermissions.permissions.any {
+        (it.permission == Manifest.permission.ACCESS_FINE_LOCATION ||
+            it.permission == Manifest.permission.ACCESS_COARSE_LOCATION) && it.status.isGranted
+    }
+    var permissionsRequestedOnce by rememberSaveable { mutableStateOf(false) }
     val lifecycleOwner = LocalLifecycleOwner.current
     val context = androidx.compose.ui.platform.LocalContext.current
     val stampStrings = rememberStampStrings()
@@ -93,15 +110,13 @@ fun CameraScreen(
     val previewView = remember { PreviewView(context) }
 
     LaunchedEffect(Unit) {
-        if (!cameraPermission.status.isGranted) cameraPermission.launchPermissionRequest()
-    }
-    LaunchedEffect(cameraPermission.status.isGranted) {
-        if (cameraPermission.status.isGranted && !locationPermission.allPermissionsGranted) {
-            locationPermission.launchMultiplePermissionRequest()
+        if (!corePermissions.allPermissionsGranted) {
+            corePermissions.launchMultiplePermissionRequest()
         }
+        permissionsRequestedOnce = true
     }
-    LaunchedEffect(locationPermission.allPermissionsGranted, locationPermission.permissions.any { it.status.isGranted }) {
-        viewModel.onLocationPermissionResult(locationPermission.permissions.any { it.status.isGranted })
+    LaunchedEffect(locationGranted) {
+        viewModel.onLocationPermissionResult(locationGranted)
     }
 
     LaunchedEffect(Unit) {
@@ -122,10 +137,15 @@ fun CameraScreen(
         }
     }
 
-    if (!cameraPermission.status.isGranted) {
-        CameraPermissionRationale(onGrant = { cameraPermission.launchPermissionRequest() }, onOpenSettings = onOpenSettings)
+    if (!cameraGranted) {
+        CameraPermissionRationale(
+            onGrant = { corePermissions.launchMultiplePermissionRequest() },
+            onOpenSettings = onOpenSettings,
+        )
         return
     }
+
+    val locationPermanentlyDenied = permissionsRequestedOnce && !locationGranted && !corePermissions.shouldShowRationale
 
     val pv = previewView
     LaunchedEffect(pv, state.mode) { viewModel.bindCamera(lifecycleOwner, pv) }
@@ -150,6 +170,28 @@ fun CameraScreen(
             onOpenSettings = onOpenSettings,
             modifier = Modifier.align(Alignment.TopCenter),
         )
+
+        if (locationPermanentlyDenied) {
+            val activityContext = androidx.compose.ui.platform.LocalContext.current
+            Text(
+                text = stringResource(R.string.location_permission_denied),
+                color = Color.White,
+                style = MaterialTheme.typography.bodySmall,
+                modifier = Modifier
+                    .align(Alignment.TopCenter)
+                    .statusBarsPadding()
+                    .padding(top = 56.dp, start = Spacing.md, end = Spacing.md)
+                    .clip(RoundedCornerShape(8.dp))
+                    .background(GeoSnapPalette.OverlayScrim)
+                    .padding(horizontal = Spacing.md, vertical = Spacing.sm)
+                    .clickable {
+                        val intent = Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS).apply {
+                            data = Uri.fromParts("package", activityContext.packageName, null)
+                        }
+                        activityContext.startActivity(intent)
+                    },
+            )
+        }
 
         val overlayNow = java.time.Instant.now()
         val baseLines = TimestampOverlayFormatter.build(

@@ -34,6 +34,8 @@ import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.SnackbarHost
+import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
@@ -76,6 +78,7 @@ fun ReportEditorScreen(
 ) {
     val state by viewModel.state.collectAsStateWithLifecycle()
     val context = LocalContext.current
+    val snackbarHostState = remember { SnackbarHostState() }
 
     var pendingSaveAsUri by remember { mutableStateOf<String?>(null) }
     val createDocLauncher = rememberLauncherForActivityResult(
@@ -107,12 +110,18 @@ fun ReportEditorScreen(
                     pendingSaveAsUri = effect.contentUri
                     createDocLauncher.launch("GPSCameraTimestampMap_Report.pdf")
                 }
-                ReportEditorEffect.ExportFailed -> Unit
+                ReportEditorEffect.ExportFailed -> {
+                    snackbarHostState.showSnackbar(context.getString(R.string.report_export_failed))
+                }
+                ReportEditorEffect.ExportReady -> {
+                    snackbarHostState.showSnackbar(context.getString(R.string.report_export_success))
+                }
             }
         }
     }
 
     Scaffold(
+        snackbarHost = { SnackbarHost(snackbarHostState) },
         topBar = {
             GeoSnapTopBar(
                 title = stringResource(R.string.new_report_title),

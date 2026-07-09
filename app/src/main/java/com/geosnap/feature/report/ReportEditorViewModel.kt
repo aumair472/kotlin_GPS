@@ -10,6 +10,7 @@ import androidx.work.workDataOf
 import com.geosnap.core.data.MediaRepository
 import com.geosnap.core.data.ReportRepository
 import com.geosnap.core.files.worker.ReportExportWorker
+import com.geosnap.core.location.CoordinateFormatter
 import com.geosnap.core.location.LocationGateway
 import com.geosnap.core.common.TimeSource
 import com.geosnap.core.model.ExportStatus
@@ -58,6 +59,7 @@ sealed interface ReportEditorEffect {
     data class Share(val contentUri: String) : ReportEditorEffect
     data class SaveAs(val contentUri: String) : ReportEditorEffect
     data object ExportFailed : ReportEditorEffect
+    data object ExportReady : ReportEditorEffect
 }
 
 @OptIn(ExperimentalCoroutinesApi::class, FlowPreview::class)
@@ -81,6 +83,8 @@ class ReportEditorViewModel @Inject constructor(
 
     private val saveTrigger = MutableSharedFlow<Unit>(extraBufferCapacity = 1)
     private var loadedReport: Report? = null
+    private var autoLocationAttempted = false
+    private var lastNotifiedExportId: String? = null
 
     init {
         reportRepository.observeReport(reportId).onEach { draft ->
@@ -93,13 +97,30 @@ class ReportEditorViewModel @Inject constructor(
                 notes = if (_state.value.loaded) _state.value.notes else draft.report.notes,
                 reportInstant = draft.report.reportInstant,
                 timezoneId = draft.report.timezoneId,
-                locationLabel = loc?.address?.formatted,
+                locationLabel = loc?.address?.formatted
+                    ?: loc?.let { CoordinateFormatter.pair(it.latitude, it.longitude, "N", "S", "E", "W") },
                 latitude = loc?.latitude, longitude = loc?.longitude,
                 altitude = loc?.altitudeMeters, accuracy = loc?.horizontalAccuracyMeters,
                 attachments = attachments,
                 export = draft.latestExport,
                 loaded = true,
             )
+
+            if (loc == null && !autoLocationAttempted) {
+                autoLocationAttempted = true
+                refreshLocation()
+            }
+
+            val export = draft.latestExport
+            if (export != null && export.id.value != lastNotifiedExportId &&
+                (export.status == ExportStatus.READY || export.status == ExportStatus.FAILED)
+            ) {
+                lastNotifiedExportId = export.id.value
+                _effects.trySend(
+                    if (export.status == ExportStatus.READY) ReportEditorEffect.ExportReady
+                    else ReportEditorEffect.ExportFailed,
+                )
+            }
         }.launchIn(viewModelScope)
 
         // Durable auto-save: coalesce rapid edits then persist.

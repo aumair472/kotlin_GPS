@@ -136,6 +136,7 @@
     <string name="report_save_as">Save As…</string>
     <string name="report_export_in_progress">Exporting PDF…</string>
     <string name="report_export_failed">Export failed</string>
+    <string name="report_export_success">Report exported</string>
     <string name="report_discard_title">Discard changes?</string>
     <string name="report_location_unavailable">Location unavailable</string>
     <string name="report_refresh_location">Refresh location</string>

@@ -10,7 +10,7 @@
     <!-- Android 12+ system splash screen, branded per DESIGN_SYSTEM. -->
     <style name="Theme.GeoSnap.Starting" parent="Theme.SplashScreen">
         <item name="windowSplashScreenBackground">@color/splash_background</item>
-        <item name="windowSplashScreenAnimatedIcon">@drawable/gps_icon</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_launcher_splash</item>
         <item name="postSplashScreenTheme">@style/Theme.GeoSnap</item>
     </style>
 </resources>

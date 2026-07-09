@@ -178,8 +178,7 @@ fun CameraScreen(
                 color = Color.White,
                 style = MaterialTheme.typography.bodySmall,
                 modifier = Modifier
-                    .align(Alignment.TopCenter)
-                    .statusBarsPadding()
+                    .align(Alignment.TopCenter) 
                     .padding(top = 56.dp, start = Spacing.md, end = Spacing.md)
                     .clip(RoundedCornerShape(8.dp))
                     .background(GeoSnapPalette.OverlayScrim)
@@ -355,7 +354,6 @@ private fun CameraHeader(
         modifier = modifier
             .fillMaxWidth()
             .background(GeoSnapPalette.CameraHeader.copy(alpha = 0.85f))
-            .statusBarsPadding()
             .padding(horizontal = Spacing.md, vertical = Spacing.sm),
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.SpaceBetween,
@@ -368,7 +366,7 @@ private fun CameraHeader(
             overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis,
             modifier = Modifier.weight(1f),
         )
-        IconButton(onClick = onOpenSettings) {
+        IconButton(onClick = onOpenSettings, modifier = Modifier.size(32.dp)) {
             Icon(Icons.Filled.Settings, contentDescription = stringResource(R.string.action_settings), tint = Color.White)
         }
     }

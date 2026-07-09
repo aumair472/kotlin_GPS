@@ -8,8 +8,10 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.pager.HorizontalPager
@@ -65,7 +67,7 @@ fun OnboardingScreen(
         viewModel.completed.collectLatest { onFinished() }
     }
 
-    Scaffold { padding ->
+    Scaffold(contentWindowInsets = WindowInsets(0, 0, 0, 0)) { padding ->
         Column(
             modifier = Modifier
                 .fillMaxSize()
@@ -76,7 +78,11 @@ fun OnboardingScreen(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.End,
             ) {
-                TextButton(onClick = viewModel::onFinish) {
+                TextButton(
+                    onClick = viewModel::onFinish,
+                    modifier = Modifier.heightIn(min = 32.dp),
+                    contentPadding = androidx.compose.foundation.layout.PaddingValues(horizontal = Spacing.sm, vertical = Spacing.xs),
+                ) {
                     Text(stringResource(R.string.action_skip), color = GeoSnapPalette.NeutralGray)
                 }
             }

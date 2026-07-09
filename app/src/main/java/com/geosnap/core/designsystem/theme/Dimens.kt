@@ -8,11 +8,11 @@ import androidx.compose.ui.unit.dp
 object Spacing {
     val xs = 4.dp
     val sm = 8.dp
-    val md = 16.dp
-    val lg = 24.dp
-    val xl = 24.dp
+    val md = 12.dp
+    val lg = 16.dp
+    val xl = 18.dp
     val marginMobile = 16.dp
-    val minTouchTarget = 44.dp
+    val minTouchTarget = 40.dp
 }
 
 /** Soft (4px / 8px) roundedness; flat layering, no shadows. */

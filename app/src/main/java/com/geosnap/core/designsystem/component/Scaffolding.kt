@@ -45,7 +45,6 @@ fun GeoSnapTopBar(
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .statusBarsPadding()
                 .height(44.dp)
                 .padding(horizontal = Spacing.xs),
             verticalAlignment = Alignment.CenterVertically,

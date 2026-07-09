@@ -147,10 +147,6 @@ fun CameraScreen(
         )
 
         CameraHeader(
-            gpsQuality = state.gpsQuality,
-            gpsText = state.latestFix?.let {
-                "${"%.4f".format(it.latitude)}, ${"%.4f".format(it.longitude)}"
-            },
             onOpenSettings = onOpenSettings,
             modifier = Modifier.align(Alignment.TopCenter),
         )
@@ -310,8 +306,6 @@ private fun CameraPermissionRationale(onGrant: () -> Unit, onOpenSettings: () ->
 
 @Composable
 private fun CameraHeader(
-    gpsQuality: LocationQuality,
-    gpsText: String?,
     onOpenSettings: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
@@ -324,25 +318,14 @@ private fun CameraHeader(
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.SpaceBetween,
     ) {
-        val dotColor = when (gpsQuality) {
-            LocationQuality.PRECISE -> GeoSnapPalette.GpsLive
-            LocationQuality.APPROXIMATE -> Color(0xFFF59E0B)
-            LocationQuality.UNAVAILABLE -> GeoSnapPalette.NeutralGray
-        }
-        Row(verticalAlignment = Alignment.CenterVertically) {
-            Box(modifier = Modifier.size(8.dp).clip(CircleShape).background(dotColor))
-            Text(
-                text = when (gpsQuality) {
-                    LocationQuality.UNAVAILABLE -> stringResource(R.string.camera_gps_acquiring)
-                    else -> gpsText ?: stringResource(R.string.camera_gps_precise)
-                },
-                color = Color.White,
-                fontFamily = MonoDataFamily,
-                style = MaterialTheme.typography.bodySmall,
-                modifier = Modifier.padding(start = Spacing.sm),
-            )
-        }
-        Text(stringResource(R.string.app_name), color = Color.White, fontWeight = FontWeight.SemiBold)
+        Text(
+            text = stringResource(R.string.app_name),
+            color = Color.White,
+            fontWeight = FontWeight.SemiBold,
+            maxLines = 1,
+            overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis,
+            modifier = Modifier.weight(1f),
+        )
         IconButton(onClick = onOpenSettings) {
             Icon(Icons.Filled.Settings, contentDescription = stringResource(R.string.action_settings), tint = Color.White)
         }

@@ -4,7 +4,10 @@ import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.geosnap.core.common.DispatcherProvider
+import com.geosnap.core.common.TimeSource
 import com.geosnap.core.data.MediaRepository
+import com.geosnap.core.location.AddressResolver
+import com.geosnap.core.location.LocationGateway
 import com.geosnap.core.media.GalleryExporter
 import com.geosnap.core.media.GalleryResult
 import com.geosnap.core.model.MediaId
@@ -28,6 +31,9 @@ class MediaDetailViewModel @Inject constructor(
     savedStateHandle: SavedStateHandle,
     private val mediaRepository: MediaRepository,
     private val galleryExporter: GalleryExporter,
+    private val locationGateway: LocationGateway,
+    private val addressResolver: AddressResolver,
+    private val time: TimeSource,
     private val dispatchers: DispatcherProvider,
 ) : ViewModel() {
 
@@ -38,6 +44,9 @@ class MediaDetailViewModel @Inject constructor(
 
     private val _exporting = MutableStateFlow(false)
     val exporting: StateFlow<Boolean> = _exporting.asStateFlow()
+
+    private val _settingLocation = MutableStateFlow(false)
+    val settingLocation: StateFlow<Boolean> = _settingLocation.asStateFlow()
 
     private val _effects = Channel<MediaDetailEffect>(Channel.BUFFERED)
     val effects = _effects.receiveAsFlow()
@@ -67,6 +76,31 @@ class MediaDetailViewModel @Inject constructor(
         }
     }
 
+    /** Capture the device's current location, reverse-geocode it, and save it to this image. */
+    fun setLocation() {
+        if (_settingLocation.value) return
+        _settingLocation.value = true
+        viewModelScope.launch {
+            try {
+                val fix = locationGateway.currentLocation()
+                if (fix == null) {
+                    _effects.trySend(MediaDetailEffect.LocationResult(success = false))
+                    return@launch
+                }
+                val address = withContext(dispatchers.io) { addressResolver.resolve(fix.latitude, fix.longitude) }
+                val snapshot = fix.toSnapshot(
+                    capturedAt = time.now(),
+                    isApproximate = (fix.horizontalAccuracyMeters ?: Float.MAX_VALUE) > 25f,
+                    address = address,
+                )
+                val result = mediaRepository.updateLocation(mediaId, snapshot)
+                _effects.trySend(MediaDetailEffect.LocationResult(success = result.isSuccess))
+            } finally {
+                _settingLocation.value = false
+            }
+        }
+    }
+
     fun delete() {
         viewModelScope.launch {
             mediaRepository.delete(setOf(mediaId))
@@ -78,5 +112,6 @@ class MediaDetailViewModel @Inject constructor(
 sealed interface MediaDetailEffect {
     data class Share(val contentUri: String) : MediaDetailEffect
     data class GalleryResultMsg(val result: GalleryResult, val isVideo: Boolean) : MediaDetailEffect
+    data class LocationResult(val success: Boolean) : MediaDetailEffect
     data object Deleted : MediaDetailEffect
 }

@@ -24,6 +24,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.MyLocation
 import androidx.compose.material.icons.filled.Refresh
+import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
@@ -81,6 +82,7 @@ fun ReportEditorScreen(
     val snackbarHostState = remember { SnackbarHostState() }
 
     var pendingSaveAsUri by remember { mutableStateOf<String?>(null) }
+    var showDeleteConfirm by remember { mutableStateOf(false) }
     val createDocLauncher = rememberLauncherForActivityResult(
         ActivityResultContracts.CreateDocument("application/pdf"),
     ) { dest ->
@@ -116,6 +118,7 @@ fun ReportEditorScreen(
                 ReportEditorEffect.ExportReady -> {
                     snackbarHostState.showSnackbar(context.getString(R.string.report_export_success))
                 }
+                ReportEditorEffect.Deleted -> onBack()
             }
         }
     }
@@ -200,7 +203,7 @@ fun ReportEditorScreen(
 
             GpsCard(state)
 
-            ExportRow(state, viewModel)
+            ExportRow(state, viewModel, onRequestDelete = { showDeleteConfirm = true })
         }
     }
 
@@ -209,6 +212,24 @@ fun ReportEditorScreen(
             media = state.pickerMedia,
             onConfirm = viewModel::attach,
             onDismiss = viewModel::closePicker,
+        )
+    }
+
+    if (showDeleteConfirm) {
+        AlertDialog(
+            onDismissRequest = { showDeleteConfirm = false },
+            title = { Text(stringResource(R.string.report_delete_confirm_title)) },
+            text = { Text(stringResource(R.string.report_delete_confirm_body)) },
+            confirmButton = {
+                TextButton(onClick = { showDeleteConfirm = false; viewModel.deleteReport() }) {
+                    Text(stringResource(R.string.report_delete), color = MaterialTheme.colorScheme.error)
+                }
+            },
+            dismissButton = {
+                TextButton(onClick = { showDeleteConfirm = false }) {
+                    Text(stringResource(R.string.action_cancel))
+                }
+            },
         )
     }
 }
@@ -278,13 +299,16 @@ private fun GpsRow(label: String, value: String) {
 }
 
 @Composable
-private fun ExportRow(state: ReportEditorUiState, viewModel: ReportEditorViewModel) {
+private fun ExportRow(state: ReportEditorUiState, viewModel: ReportEditorViewModel, onRequestDelete: () -> Unit) {
     Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(Spacing.sm)) {
         TextButton(onClick = viewModel::saveAs, modifier = Modifier.weight(1f)) {
             Text(stringResource(R.string.report_save_as))
         }
         TextButton(onClick = viewModel::share, modifier = Modifier.weight(1f)) {
             Text(stringResource(R.string.action_share))
+        }
+        TextButton(onClick = onRequestDelete, modifier = Modifier.weight(1f)) {
+            Text(stringResource(R.string.report_delete), color = MaterialTheme.colorScheme.error)
         }
     }
     when (state.export?.status) {

@@ -11,7 +11,9 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.AddLocationAlt
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Download
 import androidx.compose.material.icons.filled.Share
@@ -65,6 +67,7 @@ fun MediaDetailScreen(
 ) {
     val media by viewModel.media.collectAsStateWithLifecycle()
     val exporting by viewModel.exporting.collectAsStateWithLifecycle()
+    val settingLocation by viewModel.settingLocation.collectAsStateWithLifecycle()
     val context = LocalContext.current
     val snackbarHostState = remember { SnackbarHostState() }
     var showDeleteConfirm by remember { mutableStateOf(false) }
@@ -73,6 +76,8 @@ fun MediaDetailScreen(
     val msgVideoSaved = stringResource(R.string.video_saved_gallery)
     val msgAlready = stringResource(R.string.already_in_gallery)
     val msgFailed = stringResource(R.string.gallery_save_failed)
+    val msgLocationUpdated = stringResource(R.string.location_updated)
+    val msgLocationFailed = stringResource(R.string.location_update_failed)
 
     androidx.compose.runtime.LaunchedEffect(Unit) {
         viewModel.effects.collectLatest { effect ->
@@ -95,6 +100,9 @@ fun MediaDetailScreen(
                     }
                     snackbarHostState.showSnackbar(text)
                 }
+                is MediaDetailEffect.LocationResult -> {
+                    snackbarHostState.showSnackbar(if (effect.success) msgLocationUpdated else msgLocationFailed)
+                }
                 MediaDetailEffect.Deleted -> onBack()
             }
         }
@@ -107,6 +115,13 @@ fun MediaDetailScreen(
                 onNavigateBack = onBack,
                 navigationContentDescription = stringResource(R.string.action_back),
                 actions = {
+                    IconButton(onClick = viewModel::setLocation, enabled = !settingLocation) {
+                        if (settingLocation) {
+                            CircularProgressIndicator(strokeWidth = 2.dp, modifier = Modifier.size(20.dp))
+                        } else {
+                            Icon(Icons.Filled.AddLocationAlt, contentDescription = stringResource(R.string.action_set_location))
+                        }
+                    }
                     IconButton(onClick = viewModel::saveToGallery, enabled = !exporting) {
                         Icon(Icons.Filled.Download, contentDescription = stringResource(R.string.action_save_gallery))
                     }

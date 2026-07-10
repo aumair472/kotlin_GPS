@@ -131,6 +131,12 @@
     <string name="report_discard_title">Abandonner les modifications ?</string>
     <string name="report_location_unavailable">Localisation indisponible</string>
     <string name="report_refresh_location">Actualiser la localisation</string>
+    <string name="report_delete">Supprimer</string>
+    <string name="report_delete_confirm_title">Supprimer le rapport ?</string>
+    <string name="report_delete_confirm_body">Ce rapport et ses pièces jointes seront définitivement supprimés.</string>
+    <string name="action_set_location">Définir la localisation</string>
+    <string name="location_updated">Localisation mise à jour</string>
+    <string name="location_update_failed">Impossible d\'obtenir la localisation actuelle</string>
 
     <string name="templates_title">Modèles d\'horodatage</string>
     <string name="templates_subtitle">Choisissez un style d\'horodatage</string>

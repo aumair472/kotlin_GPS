@@ -112,7 +112,9 @@ class ReportPdfGenerator @Inject constructor(
             y += 12f; ensure(20f)
             canvas.drawText(strings.photosHeading, MARGIN, y, labelPaint); y += 18f
             attachments.forEach { item ->
-                val bmp = loadBitmap(item.thumbnailUri ?: item.contentUri)
+                // Try the thumbnail first, then fall back to the full-res source so a stale/unreadable
+                // thumbnail URI doesn't silently drop the photo from the report.
+                val bmp = loadBitmap(item.thumbnailUri) ?: loadBitmap(item.contentUri)
                 if (bmp != null) {
                     val ratio = bmp.height.toFloat() / bmp.width
                     val drawW = PAGE_W - 2 * MARGIN

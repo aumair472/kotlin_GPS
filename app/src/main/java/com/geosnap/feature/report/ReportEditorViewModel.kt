@@ -7,9 +7,11 @@ import androidx.work.ExistingWorkPolicy
 import androidx.work.OneTimeWorkRequestBuilder
 import androidx.work.WorkManager
 import androidx.work.workDataOf
+import com.geosnap.core.common.DispatcherProvider
 import com.geosnap.core.data.MediaRepository
 import com.geosnap.core.data.ReportRepository
 import com.geosnap.core.files.worker.ReportExportWorker
+import com.geosnap.core.location.AddressResolver
 import com.geosnap.core.location.CoordinateFormatter
 import com.geosnap.core.location.LocationGateway
 import com.geosnap.core.common.TimeSource
@@ -36,6 +38,7 @@ import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.flow.receiveAsFlow
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 data class ReportEditorUiState(
     val title: String = "",
@@ -60,6 +63,7 @@ sealed interface ReportEditorEffect {
     data class SaveAs(val contentUri: String) : ReportEditorEffect
     data object ExportFailed : ReportEditorEffect
     data object ExportReady : ReportEditorEffect
+    data object Deleted : ReportEditorEffect
 }
 
 @OptIn(ExperimentalCoroutinesApi::class, FlowPreview::class)
@@ -69,8 +73,10 @@ class ReportEditorViewModel @Inject constructor(
     private val reportRepository: ReportRepository,
     private val mediaRepository: MediaRepository,
     private val locationGateway: LocationGateway,
+    private val addressResolver: AddressResolver,
     private val workManager: WorkManager,
     private val time: TimeSource,
+    private val dispatchers: DispatcherProvider,
 ) : ViewModel() {
 
     private val reportId = ReportId(savedStateHandle.get<String>(Routes.Arg.REPORT_ID).orEmpty())
@@ -91,7 +97,15 @@ class ReportEditorViewModel @Inject constructor(
             if (draft == null) return@onEach
             loadedReport = draft.report
             val attachments = mediaRepository.getByIds(draft.attachments.sortedBy { it.sortOrder }.map { it.mediaId })
-            val loc = draft.report.location
+
+            // The report's location/address comes from the first attached image that has a location,
+            // so the report reflects exactly where each photo was captured. Persist it when it differs
+            // (compare by LocationId so this doesn't loop on the resulting re-emission).
+            val imageLoc = attachments.firstOrNull { it.location != null }?.location
+            if (imageLoc != null && draft.report.location?.id != imageLoc.id) {
+                reportRepository.updateLocation(reportId, imageLoc)
+            }
+            val loc = imageLoc ?: draft.report.location
             _state.value = _state.value.copy(
                 title = if (_state.value.loaded) _state.value.title else draft.report.title,
                 notes = if (_state.value.loaded) _state.value.notes else draft.report.notes,
@@ -106,7 +120,8 @@ class ReportEditorViewModel @Inject constructor(
                 loaded = true,
             )
 
-            if (loc == null && !autoLocationAttempted) {
+            // Only fall back to a live GPS fix when no attached image supplies a location.
+            if (imageLoc == null && draft.report.location == null && !autoLocationAttempted) {
                 autoLocationAttempted = true
                 refreshLocation()
             }
@@ -154,7 +169,13 @@ class ReportEditorViewModel @Inject constructor(
         viewModelScope.launch {
             val fix = locationGateway.currentLocation()
             if (fix != null) {
-                val snapshot = fix.toSnapshot(time.now(), isApproximate = (fix.horizontalAccuracyMeters ?: Float.MAX_VALUE) > 25f)
+                // Reverse-geocode so the report shows the complete address, not just coordinates.
+                val address = withContext(dispatchers.io) { addressResolver.resolve(fix.latitude, fix.longitude) }
+                val snapshot = fix.toSnapshot(
+                    time.now(),
+                    isApproximate = (fix.horizontalAccuracyMeters ?: Float.MAX_VALUE) > 25f,
+                    address = address,
+                )
                 reportRepository.updateLocation(reportId, snapshot)
             }
             _state.value = _state.value.copy(gpsLive = false)
@@ -173,6 +194,13 @@ class ReportEditorViewModel @Inject constructor(
 
     fun detach(id: MediaId) {
         viewModelScope.launch { reportRepository.detachMedia(reportId, id) }
+    }
+
+    fun deleteReport() {
+        viewModelScope.launch {
+            reportRepository.delete(reportId)
+            _effects.trySend(ReportEditorEffect.Deleted)
+        }
     }
 
     fun exportPdf() {

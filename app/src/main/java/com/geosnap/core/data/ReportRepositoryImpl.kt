@@ -119,7 +119,9 @@ class ReportRepositoryImpl @Inject constructor(
         geoSnapRunCatching {
             db.withTransaction {
                 report.location?.let { locationDao.upsert(it.toEntity()) }
-                reportDao.upsert(report.copy(updatedAt = time.now()).toEntity())
+                // Plain UPDATE — never INSERT OR REPLACE an existing report: REPLACE deletes the row
+                // first, which cascade-deletes report_media and report_exports.
+                reportDao.update(report.copy(updatedAt = time.now()).toEntity())
             }
         }
     }
@@ -130,7 +132,8 @@ class ReportRepositoryImpl @Inject constructor(
                 val entity = reportDao.getById(id.value) ?: throw IllegalStateException("report missing")
                 db.withTransaction {
                     location?.let { locationDao.upsert(it.toEntity()) }
-                    reportDao.upsert(
+                    // UPDATE, not REPLACE-upsert — see saveReport.
+                    reportDao.update(
                         entity.copy(
                             reportLocationId = location?.id?.value,
                             updatedAtMs = time.now().toEpochMilli(),

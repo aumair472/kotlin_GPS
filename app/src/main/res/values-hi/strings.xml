@@ -131,6 +131,12 @@
     <string name="report_discard_title">बदलाव छोड़ें?</string>
     <string name="report_location_unavailable">स्थान उपलब्ध नहीं है</string>
     <string name="report_refresh_location">स्थान ताज़ा करें</string>
+    <string name="report_delete">हटाएँ</string>
+    <string name="report_delete_confirm_title">रिपोर्ट हटाएँ?</string>
+    <string name="report_delete_confirm_body">यह रिपोर्ट और इसके अनुलग्नक स्थायी रूप से हटा दिए जाएँगे।</string>
+    <string name="action_set_location">स्थान सेट करें</string>
+    <string name="location_updated">स्थान अपडेट हो गया</string>
+    <string name="location_update_failed">वर्तमान स्थान प्राप्त नहीं हो सका</string>
 
     <string name="templates_title">टाइमस्टैंप टेम्पलेट्स</string>
     <string name="templates_subtitle">टाइमस्टैंप शैली चुनें</string>

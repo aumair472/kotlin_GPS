@@ -131,6 +131,12 @@
     <string name="report_discard_title">Änderungen verwerfen?</string>
     <string name="report_location_unavailable">Standort nicht verfügbar</string>
     <string name="report_refresh_location">Standort aktualisieren</string>
+    <string name="report_delete">Löschen</string>
+    <string name="report_delete_confirm_title">Bericht löschen?</string>
+    <string name="report_delete_confirm_body">Dieser Bericht und seine Anhänge werden dauerhaft entfernt.</string>
+    <string name="action_set_location">Standort festlegen</string>
+    <string name="location_updated">Standort aktualisiert</string>
+    <string name="location_update_failed">Aktueller Standort konnte nicht ermittelt werden</string>
 
     <string name="templates_title">Zeitstempel-Vorlagen</string>
     <string name="templates_subtitle">Wähle einen Zeitstempel-Stil</string>

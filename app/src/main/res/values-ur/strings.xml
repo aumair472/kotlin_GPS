@@ -131,6 +131,12 @@
     <string name="report_discard_title">تبدیلیاں مسترد کریں؟</string>
     <string name="report_location_unavailable">مقام دستیاب نہیں</string>
     <string name="report_refresh_location">مقام تازہ کریں</string>
+    <string name="report_delete">حذف کریں</string>
+    <string name="report_delete_confirm_title">رپورٹ حذف کریں؟</string>
+    <string name="report_delete_confirm_body">یہ رپورٹ اور اس کے منسلکات مستقل طور پر حذف کر دیے جائیں گے۔</string>
+    <string name="action_set_location">مقام مقرر کریں</string>
+    <string name="location_updated">مقام اپ ڈیٹ ہو گیا</string>
+    <string name="location_update_failed">موجودہ مقام حاصل نہیں ہو سکا</string>
 
     <string name="templates_title">ٹائم اسٹیمپ ٹیمپلیٹس</string>
     <string name="templates_subtitle">ٹائم اسٹیمپ کا انداز منتخب کریں</string>

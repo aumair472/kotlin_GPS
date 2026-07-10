@@ -140,6 +140,29 @@ class MediaRepositoryImpl @Inject constructor(
             }
         }
 
+    override suspend fun updateLocation(id: MediaId, location: com.geosnap.core.model.GeoSnapshot): Result<Unit> =
+        withContext(dispatchers.io) {
+            geoSnapRunCatching {
+                db.withTransaction {
+                    locationDao.upsert(location.toEntity())
+                    mediaDao.updateLocation(
+                        id = id.value,
+                        locationId = location.id.value,
+                        addressSearchText = buildSearchText(location),
+                        updatedAtMs = time.now().toEpochMilli(),
+                    )
+                    locationDao.deleteOrphans()
+                }
+            }
+        }
+
+    /** Lowercased searchable text from the resolved address, mirroring PhotoFinalizer. */
+    private fun buildSearchText(location: com.geosnap.core.model.GeoSnapshot): String? {
+        val a = location.address ?: return null
+        return listOfNotNull(a.locality, a.adminArea, a.countryCode, a.formatted)
+            .joinToString(" ").lowercase(java.util.Locale.getDefault()).ifBlank { null }
+    }
+
     override suspend fun delete(ids: Set<MediaId>): Result<Unit> = withContext(dispatchers.io) {
         geoSnapRunCatching {
             db.withTransaction {

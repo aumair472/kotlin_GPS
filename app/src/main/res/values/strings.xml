@@ -141,6 +141,12 @@
     <string name="report_discard_title">Discard changes?</string>
     <string name="report_location_unavailable">Location unavailable</string>
     <string name="report_refresh_location">Refresh location</string>
+    <string name="report_delete">Delete</string>
+    <string name="report_delete_confirm_title">Delete report?</string>
+    <string name="report_delete_confirm_body">This report and its attachments will be permanently removed.</string>
+    <string name="action_set_location">Set location</string>
+    <string name="location_updated">Location updated</string>
+    <string name="location_update_failed">Couldn\'t get current location</string>
 
     <!-- Templates -->
     <string name="templates_title">Timestamp Templates</string>

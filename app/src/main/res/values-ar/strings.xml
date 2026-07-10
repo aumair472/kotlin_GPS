@@ -131,6 +131,12 @@
     <string name="report_discard_title">تجاهل التغييرات؟</string>
     <string name="report_location_unavailable">الموقع غير متاح</string>
     <string name="report_refresh_location">تحديث الموقع</string>
+    <string name="report_delete">حذف</string>
+    <string name="report_delete_confirm_title">حذف التقرير؟</string>
+    <string name="report_delete_confirm_body">سيتم حذف هذا التقرير ومرفقاته نهائيًا.</string>
+    <string name="action_set_location">تعيين الموقع</string>
+    <string name="location_updated">تم تحديث الموقع</string>
+    <string name="location_update_failed">تعذّر الحصول على الموقع الحالي</string>
 
     <string name="templates_title">قوالب الطابع الزمني</string>
     <string name="templates_subtitle">اختر نمط الطابع الزمني</string>

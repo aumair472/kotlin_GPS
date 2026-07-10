@@ -1,6 +1,7 @@
 package com.geosnap.core.data
 
 import androidx.paging.PagingData
+import com.geosnap.core.model.GeoSnapshot
 import com.geosnap.core.model.MediaId
 import com.geosnap.core.model.MediaItem
 import com.geosnap.core.model.MediaQuery
@@ -28,6 +29,9 @@ interface MediaRepository {
     suspend fun markVideoReady(id: MediaId, contentUri: String, thumbnailUri: String?, durationMs: Long?, sizeBytes: Long?): Result<Unit>
     suspend fun markFailed(id: MediaId, failureCode: String): Result<Unit>
     suspend fun updateStatus(id: MediaId, status: MediaStatus): Result<Unit>
+
+    /** Set/replace the location (and its resolved address) on an existing media item. */
+    suspend fun updateLocation(id: MediaId, location: GeoSnapshot): Result<Unit>
 
     suspend fun delete(ids: Set<MediaId>): Result<Unit>
 }

@@ -40,6 +40,12 @@ interface MediaDao {
     @Query("UPDATE media_items SET status = :status, failure_code = :failureCode, updated_at_epoch_ms = :updatedAtMs WHERE id = :id")
     suspend fun markFailed(id: String, status: String, failureCode: String?, updatedAtMs: Long)
 
+    @Query(
+        "UPDATE media_items SET location_id = :locationId, address_search_text = :addressSearchText, " +
+            "updated_at_epoch_ms = :updatedAtMs WHERE id = :id",
+    )
+    suspend fun updateLocation(id: String, locationId: String?, addressSearchText: String?, updatedAtMs: Long)
+
     @Transaction
     @Query("SELECT * FROM media_items WHERE id = :id")
     fun observeById(id: String): Flow<MediaWithLocation?>

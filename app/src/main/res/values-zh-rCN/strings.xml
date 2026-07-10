@@ -131,6 +131,12 @@
     <string name="report_discard_title">放弃更改？</string>
     <string name="report_location_unavailable">位置不可用</string>
     <string name="report_refresh_location">刷新位置</string>
+    <string name="report_delete">删除</string>
+    <string name="report_delete_confirm_title">删除报告？</string>
+    <string name="report_delete_confirm_body">此报告及其附件将被永久删除。</string>
+    <string name="action_set_location">设置位置</string>
+    <string name="location_updated">位置已更新</string>
+    <string name="location_update_failed">无法获取当前位置</string>
 
     <string name="templates_title">时间戳模板</string>
     <string name="templates_subtitle">选择时间戳样式</string>

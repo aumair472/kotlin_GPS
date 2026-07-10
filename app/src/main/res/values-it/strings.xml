@@ -131,6 +131,12 @@
     <string name="report_discard_title">Scartare le modifiche?</string>
     <string name="report_location_unavailable">Posizione non disponibile</string>
     <string name="report_refresh_location">Aggiorna posizione</string>
+    <string name="report_delete">Elimina</string>
+    <string name="report_delete_confirm_title">Eliminare il rapporto?</string>
+    <string name="report_delete_confirm_body">Questo rapporto e i suoi allegati verranno rimossi definitivamente.</string>
+    <string name="action_set_location">Imposta posizione</string>
+    <string name="location_updated">Posizione aggiornata</string>
+    <string name="location_update_failed">Impossibile ottenere la posizione attuale</string>
 
     <string name="templates_title">Modelli di timbro data/ora</string>
     <string name="templates_subtitle">Scegli uno stile di timbro</string>
